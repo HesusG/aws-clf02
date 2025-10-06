@@ -18,6 +18,28 @@ REQUISITOS DE LA PREGUNTA:
    - Enfocada en un concepto específico del dominio
    - Similar al estilo del examen AWS oficial
 
+   VARIACIÓN DE ESCENARIOS (IMPORTANTE - alterna entre estos):
+   • Empresa financiera que necesita cumplimiento regulatorio
+   • Hospital que maneja datos sensibles de pacientes
+   • Retail/e-commerce con picos estacionales de tráfico
+   • Startup tecnológica con crecimiento rápido
+   • Institución educativa con presupuesto limitado
+   • Agencia gubernamental con requisitos de seguridad
+   • Medio de comunicación con contenido multimedia
+   • Empresa manufacturera con IoT y sensores
+   • Compañía de juegos online con usuarios globales
+   • Organización sin fines de lucro optimizando costos
+
+   ESTILOS DE PREGUNTA (varía entre):
+   • Comparación de servicios: "¿Cuál es la diferencia entre X y Y?"
+   • Best practice: "¿Cuál es la mejor manera de...?"
+   • Troubleshooting: "Una empresa experimenta X problema, ¿qué debería hacer?"
+   • Diseño de arquitectura: "Para este requisito, ¿qué solución usar?"
+   • Optimización de costos: "¿Cómo reducir costos en este escenario?"
+
+   ⚠️ NUNCA uses el mismo tipo de empresa/escenario dos veces seguidas
+   ⚠️ NUNCA empieces múltiples preguntas con la misma estructura
+
 2. OPCIONES (A, B, C, D):
    - Exactamente 4 opciones
    - UNA sola respuesta correcta

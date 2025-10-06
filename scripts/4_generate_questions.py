@@ -28,6 +28,8 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from tqdm import tqdm
 import tiktoken
+import random
+from difflib import SequenceMatcher
 
 # Configuración
 CHROMA_DIR = PROJECT_ROOT / "data" / "chroma_db"
@@ -79,6 +81,29 @@ DOMAIN_TOPICS = {
     ]
 }
 
+# Variaciones de consulta para el mismo topic (evitar siempre mismo contexto RAG)
+QUERY_VARIATIONS = [
+    "{topic}",
+    "AWS {topic} best practices",
+    "{topic} use cases",
+    "{topic} características principales",
+    "{topic} ejemplos prácticos"
+]
+
+# Escenarios de negocio para variar preguntas
+BUSINESS_SCENARIOS = [
+    "empresa financiera que necesita cumplimiento regulatorio",
+    "hospital que maneja datos sensibles de pacientes",
+    "retail/e-commerce con picos estacionales de tráfico",
+    "startup tecnológica con crecimiento rápido",
+    "institución educativa con presupuesto limitado",
+    "agencia gubernamental con requisitos de seguridad",
+    "medio de comunicación con contenido multimedia",
+    "empresa manufacturera con IoT y sensores",
+    "compañía de juegos online con usuarios globales",
+    "organización sin fines de lucro optimizando costos"
+]
+
 
 class QuestionGenerator:
     def __init__(self):
@@ -87,6 +112,8 @@ class QuestionGenerator:
         self.system_prompt = None
         self.examples = None
         self.encoding = tiktoken.get_encoding("cl100k_base")
+        self.generated_questions = []  # Para deduplicación
+        self.scenario_index = 0  # Rotar escenarios
 
     def load_rag_system(self):
         """Carga el sistema RAG"""
@@ -121,10 +148,31 @@ class QuestionGenerator:
 
         print("   ✅ Prompts cargados")
 
+    def similarity_ratio(self, text1: str, text2: str) -> float:
+        """Calcula similaridad entre dos textos (0-1)"""
+        return SequenceMatcher(None, text1.lower(), text2.lower()).ratio()
+
+    def is_duplicate(self, new_question: str, threshold: float = 0.7) -> bool:
+        """Verifica si la pregunta es muy similar a una existente"""
+        for existing in self.generated_questions:
+            if self.similarity_ratio(new_question, existing) > threshold:
+                return True
+        return False
+
+    def get_next_scenario(self) -> str:
+        """Obtiene siguiente escenario de negocio (rotación)"""
+        scenario = BUSINESS_SCENARIOS[self.scenario_index % len(BUSINESS_SCENARIOS)]
+        self.scenario_index += 1
+        return scenario
+
     def get_relevant_context(self, domain: str, topic: str, k: int = 3) -> str:
-        """Obtiene contexto relevante usando RAG"""
-        query = f"{domain}: {topic}"
-        docs = self.vectorstore.similarity_search(query, k=k)
+        """Obtiene contexto relevante usando RAG con variación de query"""
+        # Variar query para obtener contexto diferente
+        query_template = random.choice(QUERY_VARIATIONS)
+        query = query_template.format(topic=topic)
+        full_query = f"{domain}: {query}"
+
+        docs = self.vectorstore.similarity_search(full_query, k=k)
 
         context_parts = []
         for i, doc in enumerate(docs, 1):
@@ -145,23 +193,26 @@ class QuestionGenerator:
         """Cuenta tokens"""
         return len(self.encoding.encode(text))
 
-    def generate_question(self, domain: str, topic: str) -> dict:
-        """Genera una pregunta usando RAG + GPT-4o-mini"""
+    def generate_question(self, domain: str, topic: str, max_retries: int = 3) -> dict:
+        """Genera una pregunta usando RAG + GPT-4o-mini con deduplicación"""
 
-        # 1. Obtener contexto relevante
-        context = self.get_relevant_context(domain, topic)
+        for attempt in range(max_retries):
+            # 1. Obtener contexto relevante (varía cada intento)
+            context = self.get_relevant_context(domain, topic)
 
-        # 2. Obtener ejemplo few-shot
-        example = self.get_example_for_domain(domain)
+            # 2. Obtener ejemplo few-shot
+            example = self.get_example_for_domain(domain)
 
-        # 3. Construir system prompt
-        system_msg = self.system_prompt.format(
-            context=context,
-            domain=domain
-        )
+            # 3. Obtener escenario de negocio para esta pregunta
+            scenario = self.get_next_scenario()
 
-        # 4. Construir user prompt
-        user_msg = f"""Genera UNA pregunta de examen sobre: {topic}
+            # 4. Construir system prompt
+            system_msg = self.system_prompt.replace("{context}", context).replace("{domain}", domain)
+
+            # 5. Construir user prompt con variación
+            user_msg = f"""Genera UNA pregunta de examen sobre: {topic}
+
+CONTEXTO ESPECÍFICO: Usa un escenario con una {scenario}
 
 Sigue el formato del siguiente ejemplo:
 
@@ -169,45 +220,67 @@ Sigue el formato del siguiente ejemplo:
 
 IMPORTANTE:
 - Usa SOLO información del contexto proporcionado
-- La pregunta debe ser basada en un escenario real
-- Las 4 opciones deben ser plausibles
+- La pregunta DEBE estar basada en el escenario de: {scenario}
+- Las 4 opciones deben ser plausibles pero distintas
 - La explicación debe ser educativa y completa
+- VARÍA la estructura de la pregunta (comparación, troubleshooting, best practice, etc.)
+- NO repitas frases como "Una startup de tecnología..." si ya las usaste
 - Responde SOLO con JSON válido, sin texto adicional"""
 
-        # 5. Llamar a GPT-4o-mini
-        try:
-            response = self.client.chat.completions.create(
-                model=MODEL,
-                messages=[
-                    {"role": "system", "content": system_msg},
-                    {"role": "user", "content": user_msg}
-                ],
-                temperature=0.8,  # Mayor creatividad
-                response_format={"type": "json_object"}
-            )
+            # 6. Llamar a GPT-4o-mini
+            try:
+                response = self.client.chat.completions.create(
+                    model=MODEL,
+                    messages=[
+                        {"role": "system", "content": system_msg},
+                        {"role": "user", "content": user_msg}
+                    ],
+                    temperature=1.0,  # Máxima creatividad
+                    top_p=0.9,  # Nucleus sampling
+                    response_format={"type": "json_object"}
+                )
 
-            # 6. Parsear respuesta
-            content = response.choices[0].message.content
-            question_data = json.loads(content)
+                # 7. Parsear respuesta
+                content = response.choices[0].message.content
+                question_data = json.loads(content)
 
-            # 7. Agregar metadata
-            question_data["domain"] = domain
-            question_data["topic"] = topic
-            question_data["retrieved_context"] = context[:500]  # Guardar para evals
-            question_data["tokens_used"] = {
-                "input": response.usage.prompt_tokens,
-                "output": response.usage.completion_tokens,
-                "total": response.usage.total_tokens
-            }
+                # 8. Verificar duplicación
+                new_question_text = question_data.get("question", "")
+                if self.is_duplicate(new_question_text):
+                    if attempt < max_retries - 1:
+                        print(f"   ⚠️ Pregunta duplicada detectada, reintentando ({attempt + 1}/{max_retries})...")
+                        continue
+                    else:
+                        print(f"   ⚠️ Pregunta duplicada después de {max_retries} intentos, aceptando...")
 
-            return question_data
+                # 9. Agregar a lista de generadas
+                self.generated_questions.append(new_question_text)
 
-        except Exception as e:
-            print(f"\n❌ Error generando pregunta: {str(e)}")
-            return None
+                # 10. Agregar metadata
+                question_data["domain"] = domain
+                question_data["topic"] = topic
+                question_data["scenario"] = scenario
+                question_data["retrieved_context"] = context[:500]  # Guardar para evals
+                question_data["tokens_used"] = {
+                    "input": response.usage.prompt_tokens,
+                    "output": response.usage.completion_tokens,
+                    "total": response.usage.total_tokens
+                }
+
+                return question_data
+
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    print(f"   ❌ Error en intento {attempt + 1}, reintentando...")
+                    continue
+                else:
+                    print(f"\n❌ Error generando pregunta después de {max_retries} intentos: {str(e)}")
+                    return None
+
+        return None
 
     def distribute_questions(self, total: int) -> List[tuple]:
-        """Distribuye preguntas por dominio y topic"""
+        """Distribuye preguntas por dominio y topic con aleatorización"""
         distribution = []
 
         for domain, percentage in DOMAINS.items():
@@ -226,6 +299,8 @@ IMPORTANTE:
                 for _ in range(topic_count):
                     distribution.append((domain, topic))
 
+        # Aleatorizar orden para evitar patrones predecibles
+        random.shuffle(distribution)
         return distribution
 
     def generate_batch(self, count: int, output_file: str = "questions_raw.json"):
