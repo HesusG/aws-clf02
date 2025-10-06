@@ -594,3 +594,30 @@ body {
     background: var(--aws-orange);
     color: var(--aws-light);
 }
+
+.btn-show-answer {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--aws-light);
+    background: #0073BB;
+    border: 2px solid #0073BB;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-show-answer:hover {
+    background: #005A8C;
+    border-color: #005A8C;
+}
+
+.btn-show-answer.shown {
+    background: var(--success);
+    border-color: var(--success);
+}
+
+.answer-revealed {
+    border: 2px solid #0073BB !important;
+    background: #E6F4FF !important;
+}

@@ -149,6 +149,9 @@ function displayQuestion(index) {
     // Actualizar estado de botón "Marcar"
     updateMarkButton();
 
+    // Actualizar botón "Ver Respuesta"
+    updateShowAnswerButton();
+
     // Actualizar botones de navegación
     updateNavigationButtons();
 }
@@ -341,6 +344,66 @@ function calculateResults() {
             ? (examState.config.timeLimit * 60 - examState.timeRemaining)
             : null
     };
+}
+
+// Mostrar respuesta correcta
+function showAnswer() {
+    const question = examState.questions[examState.currentIndex];
+    const explanationBox = document.getElementById('explanationBox');
+    const explanationText = document.getElementById('explanationText');
+    const btnShowAnswer = document.getElementById('btnShowAnswer');
+
+    // Marcar opción correcta visualmente
+    const optionsList = document.getElementById('optionsList');
+    const labels = optionsList.querySelectorAll('.option-label');
+
+    labels.forEach(label => {
+        const radio = label.querySelector('input[type="radio"]');
+        const optionLetter = radio.value;
+
+        // Limpiar clases previas
+        label.classList.remove('correct', 'incorrect', 'answer-revealed');
+
+        // Si es la respuesta correcta, marcarla
+        if (optionLetter === question.correctAnswer) {
+            label.classList.add('answer-revealed');
+        }
+
+        // Si el usuario respondió incorrectamente, marcar como incorrecta
+        const userAnswer = examState.answers[question.id];
+        if (userAnswer && userAnswer !== question.correctAnswer && optionLetter === userAnswer) {
+            label.classList.add('incorrect');
+        }
+    });
+
+    // Mostrar explicación
+    explanationBox.style.display = 'block';
+    explanationText.textContent = question.explanation || 'No hay explicación disponible.';
+
+    // Cambiar estado del botón
+    btnShowAnswer.classList.add('shown');
+    btnShowAnswer.textContent = '✓ Respuesta Mostrada';
+
+    // Guardar que se mostró la respuesta
+    if (!examState.answersShown) {
+        examState.answersShown = new Set();
+    }
+    examState.answersShown.add(question.id);
+    saveExamState();
+}
+
+// Actualizar displayQuestion para restaurar estado de respuesta mostrada
+function updateShowAnswerButton() {
+    const question = examState.questions[examState.currentIndex];
+    const btnShowAnswer = document.getElementById('btnShowAnswer');
+
+    if (examState.answersShown && examState.answersShown.has(question.id)) {
+        btnShowAnswer.classList.add('shown');
+        btnShowAnswer.textContent = '✓ Respuesta Mostrada';
+    } else {
+        btnShowAnswer.classList.remove('shown');
+        btnShowAnswer.textContent = '👁️ Ver Respuesta';
+    }
 }
 
 // Manejar cierre de ventana (advertir sobre pérdida de progreso)

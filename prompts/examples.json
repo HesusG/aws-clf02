@@ -1,0 +1,58 @@
+[
+  {
+    "domain": "Domain 1: Cloud Concepts",
+    "example": {
+      "question": "Una empresa de retail experimenta picos de tráfico impredecibles durante eventos de Black Friday. La empresa quiere pagar solo por los recursos que usa durante estos picos sin mantener capacidad ociosa el resto del año. ¿Qué característica de AWS les permite lograr esto?",
+      "options": {
+        "A": "Alta disponibilidad",
+        "B": "Elasticidad",
+        "C": "Durabilidad",
+        "D": "Encriptación"
+      },
+      "correct_answer": "B",
+      "explanation": "**Respuesta correcta: B) Elasticidad**\n\nLa elasticidad es la capacidad de escalar recursos automáticamente hacia arriba o abajo según la demanda. Durante Black Friday, servicios como Amazon EC2 Auto Scaling pueden aumentar instancias automáticamente para manejar el tráfico, y reducirlas cuando disminuye, pagando solo por los recursos utilizados.\n\n**Por qué las otras opciones son incorrectas:**\n- A) Alta disponibilidad se refiere a minimizar tiempo de inactividad, no a escalar recursos dinámicamente\n- C) Durabilidad es la protección contra pérdida de datos, no relacionada con capacidad de cómputo\n- D) Encriptación protege datos, pero no afecta la capacidad de manejar cargas variables\n\n**Concepto clave:** La elasticidad es uno de los beneficios principales de cloud computing que permite optimizar costos ajustando recursos a la demanda real."
+    }
+  },
+  {
+    "domain": "Domain 2: Security and Compliance",
+    "example": {
+      "question": "Una startup está desarrollando su primera aplicación en AWS. El equipo de seguridad quiere monitorear continuamente la cuenta de AWS en busca de actividad sospechosa como llamadas API inusuales o comportamientos maliciosos. ¿Qué servicio deberían utilizar?",
+      "options": {
+        "A": "AWS Shield",
+        "B": "Amazon Inspector",
+        "C": "Amazon GuardDuty",
+        "D": "AWS WAF"
+      },
+      "correct_answer": "C",
+      "explanation": "**Respuesta correcta: C) Amazon GuardDuty**\n\nAmazon GuardDuty es un servicio de detección de amenazas que monitorea continuamente actividad maliciosa y comportamiento no autorizado. Analiza eventos de AWS CloudTrail, VPC Flow Logs y DNS logs para detectar amenazas usando machine learning.\n\n**Por qué las otras opciones son incorrectas:**\n- A) AWS Shield protege contra ataques DDoS, no detecta actividad sospechosa en logs\n- B) Amazon Inspector evalúa vulnerabilidades en aplicaciones, no monitorea actividad de cuenta\n- D) AWS WAF es un firewall de aplicaciones web que filtra tráfico HTTP/HTTPS, no analiza comportamiento de cuenta\n\n**Concepto clave:** GuardDuty proporciona detección de amenazas inteligente sin necesidad de implementar y mantener infraestructura de seguridad adicional."
+    }
+  },
+  {
+    "domain": "Domain 3: Cloud Technology and Services",
+    "example": {
+      "question": "Una empresa necesita almacenar archivos de logs que deben retenerse por 7 años debido a regulaciones. Los archivos raramente se acceden, pero deben estar disponibles en caso de auditorías con un tiempo de recuperación aceptable de hasta 12 horas. ¿Qué clase de almacenamiento de Amazon S3 es más costo-efectiva?",
+      "options": {
+        "A": "S3 Standard",
+        "B": "S3 Standard-IA",
+        "C": "S3 Glacier Flexible Retrieval",
+        "D": "S3 Glacier Deep Archive"
+      },
+      "correct_answer": "D",
+      "explanation": "**Respuesta correcta: D) S3 Glacier Deep Archive**\n\nS3 Glacier Deep Archive es la clase de almacenamiento más económica de Amazon S3, diseñada para retención a largo plazo de datos que se acceden raramente. Ofrece tiempos de recuperación de 12-48 horas, cumpliendo perfectamente con el requisito de 12 horas, y es ideal para cumplimiento de regulaciones de 7+ años.\n\n**Por qué las otras opciones son incorrectas:**\n- A) S3 Standard es para datos accedidos frecuentemente y sería muy costoso para 7 años de retención\n- B) S3 Standard-IA es para acceso poco frecuente pero aún regular, más caro que Glacier\n- C) S3 Glacier Flexible Retrieval (anteriormente Glacier) ofrece recuperación en minutos-horas pero es más costoso que Deep Archive para este caso de uso\n\n**Concepto clave:** Amazon S3 ofrece diferentes clases de almacenamiento optimizadas para distintos patrones de acceso, permitiendo optimizar costos según los requisitos de negocio."
+    }
+  },
+  {
+    "domain": "Domain 4: Billing, Pricing, and Support",
+    "example": {
+      "question": "Una empresa mediana migró recientemente a AWS y quiere recibir recomendaciones personalizadas sobre mejores prácticas de AWS, optimización de costos y alertas de seguridad. También necesitan soporte técnico 24/7 con tiempo de respuesta de menos de 1 hora para problemas de producción. ¿Qué plan de AWS Support cumple estos requisitos?",
+      "options": {
+        "A": "Basic Support",
+        "B": "Developer Support",
+        "C": "Business Support",
+        "D": "Enterprise Support"
+      },
+      "correct_answer": "C",
+      "explanation": "**Respuesta correcta: C) Business Support**\n\nBusiness Support incluye acceso completo a AWS Trusted Advisor (con todas las verificaciones de optimización de costos, rendimiento y seguridad), soporte técnico 24/7 y tiempo de respuesta de menos de 1 hora para sistemas de producción afectados, cumpliendo todos los requisitos mencionados.\n\n**Por qué las otras opciones son incorrectas:**\n- A) Basic Support solo ofrece acceso a documentación y foros, sin soporte técnico personalizado ni Trusted Advisor completo\n- B) Developer Support solo tiene soporte durante horario laboral y tiempo de respuesta de 12-24 horas, sin acceso completo a Trusted Advisor\n- D) Enterprise Support incluye todo lo de Business pero agrega un Technical Account Manager (TAM) y otros beneficios que no son necesarios para los requisitos descritos, siendo más costoso\n\n**Concepto clave:** AWS ofrece diferentes niveles de soporte diseñados para distintos tamaños y necesidades de empresas, con características y tiempos de respuesta específicos para cada nivel."
+    }
+  }
+]

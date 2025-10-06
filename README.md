@@ -4,7 +4,7 @@ Simulador de examen interactivo para el **AWS Certified Cloud Practitioner (CLF-
 
 ## 🚀 Demo en Vivo
 
-[Ver Simulador](https://tu-usuario.github.io/aws-clf02/) *(Actualiza este enlace después de publicar)*
+[Ver Simulador](https://hesusg.github.io/aws-clf02/) 🔗
 
 ## ✨ Características
 
