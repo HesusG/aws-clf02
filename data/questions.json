@@ -1,0 +1,3931 @@
+{
+  "metadata": {
+    "exam": "AWS Certified Cloud Practitioner",
+    "version": "CLF-C02",
+    "total_questions": 208,
+    "generated_date": "2025-10-05",
+    "source": "EXAMEN REAL MAESTRO AWS"
+  },
+  "domains": {
+    "Domain 1: Cloud Concepts": {
+      "weight": 24,
+      "keywords": [
+        "beneficios",
+        "cloud",
+        "escalabilidad",
+        "elasticidad",
+        "agilidad",
+        "alta disponibilidad",
+        "tolerancia a fallos",
+        "economía",
+        "migración"
+      ]
+    },
+    "Domain 2: Security and Compliance": {
+      "weight": 30,
+      "keywords": [
+        "seguridad",
+        "IAM",
+        "Shield",
+        "WAF",
+        "GuardDuty",
+        "Inspector",
+        "responsabilidad compartida",
+        "cifrado",
+        "compliance",
+        "políticas"
+      ]
+    },
+    "Domain 3: Cloud Technology and Services": {
+      "weight": 34,
+      "keywords": [
+        "EC2",
+        "S3",
+        "Lambda",
+        "RDS",
+        "DynamoDB",
+        "ECS",
+        "EKS",
+        "VPC",
+        "CloudFront",
+        "Route 53",
+        "contenedor",
+        "almacenamiento",
+        "base de datos"
+      ]
+    },
+    "Domain 4: Billing, Pricing, and Support": {
+      "weight": 12,
+      "keywords": [
+        "facturación",
+        "precio",
+        "costo",
+        "soporte",
+        "Trusted Advisor",
+        "AWS Support",
+        "Cost Explorer",
+        "presupuesto",
+        "TCO",
+        "ROI",
+        "CAF"
+      ]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "originalNumber": 1,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio detecta amenazas analizando VPC Flow Logs y CloudTrail?",
+      "options": {
+        "A": "Proteger los centros de datos físicos",
+        "B": "Configurar políticas de IAM",
+        "C": "Mantener la red global",
+        "D": "Instalar firewalls en la infraestructura de AWS"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Configurar políticas de IAM.",
+      "services": [
+        "AWS IAM",
+        "Amazon VPC",
+        "AWS Config",
+        "AWS CloudTrail"
+      ]
+    },
+    {
+      "id": 2,
+      "originalNumber": 3,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué beneficio principal ofrece AWS Shield Standard?",
+      "options": {
+        "A": "Reglas de firewall personalizadas",
+        "B": "Es gratuito y automático",
+        "C": "Evaluación de vulnerabilidades",
+        "D": "Soporte premium contra DDoS"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Shield Standard → gratuito y activado por defecto.",
+      "services": [
+        "AWS Shield"
+      ]
+    },
+    {
+      "id": 3,
+      "originalNumber": 1,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio es un registro seguro de imágenes Docker?",
+      "options": {
+        "A": "Amazon ECS",
+        "B": "Amazon EKS",
+        "C": "Amazon ECR",
+        "D": "AWS Fargate"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) ECR.",
+      "services": [
+        "Amazon ECR",
+        "Amazon EKS",
+        "AWS Fargate",
+        "Amazon ECS"
+      ]
+    },
+    {
+      "id": 4,
+      "originalNumber": 2,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio permite ejecutar Kubernetes sin administrar nodos maestros?",
+      "options": {
+        "A": "Amazon ECS",
+        "B": "Amazon EKS",
+        "C": "AWS Fargate",
+        "D": "Amazon ECR"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Amazon EKS.",
+      "services": [
+        "Amazon ECR",
+        "Amazon EKS",
+        "AWS Fargate",
+        "Amazon ECS"
+      ]
+    },
+    {
+      "id": 5,
+      "originalNumber": 3,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué opción usarías para ejecutar contenedores sin servidores?",
+      "options": {
+        "A": "Amazon ECS con Fargate",
+        "B": "Amazon ECR",
+        "C": "Amazon EKS",
+        "D": "AWS Lambda"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) ECS con Fargate.",
+      "services": [
+        "Amazon ECR",
+        "Amazon EKS",
+        "AWS Fargate",
+        "Amazon ECS",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 6,
+      "originalNumber": 1,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué opción es mejor para una base de datos crítica usada 24/7?",
+      "options": {
+        "A": "On-Demand",
+        "B": "Reserved Instances",
+        "C": "Spot",
+        "D": "Savings Plans"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Reserved Instances.",
+      "services": []
+    },
+    {
+      "id": 7,
+      "originalNumber": 2,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuál es la opción más barata pero con riesgo de interrupción?",
+      "options": {
+        "A": "Reserved",
+        "B": "Spot Instances",
+        "C": "Savings Plans",
+        "D": "On-Demand"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Spot Instances.",
+      "services": []
+    },
+    {
+      "id": 8,
+      "originalNumber": 3,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio recomienda automáticamente el mejor tipo de instancia?",
+      "options": {
+        "A": "AWS Trusted Advisor",
+        "B": "AWS Compute Optimizer",
+        "C": "AWS Config",
+        "D": "Amazon CloudWatch"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Compute Optimizer.",
+      "services": [
+        "Amazon CloudWatch",
+        "AWS Config",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 9,
+      "originalNumber": 1,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué clase de almacenamiento de S3 es ideal para archivos de archivo histórico con acceso muy poco frecuente y recuperación en horas?",
+      "options": {
+        "A": "S3 Standard",
+        "B": "S3 Glacier Deep Archive",
+        "C": "S3 Intelligent-Tiering",
+        "D": "S3 One Zone-IA"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) S3 Glacier Deep Archive → diseñada para archivos de largo plazo.",
+      "services": [
+        "Amazon S3"
+      ]
+    },
+    {
+      "id": 10,
+      "originalNumber": 2,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio usarías para migrar 100 TB de datos desde un centro de datos local hacia AWS cuando tu conexión a Internet es muy lenta?",
+      "options": {
+        "A": "AWS DataSync",
+        "B": "AWS Snowball",
+        "C": "AWS Storage Gateway",
+        "D": "Amazon S3"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) AWS Snowball → se usa un dispositivo físico. migraciones físicas.",
+      "services": [
+        "Amazon S3",
+        "AWS Storage Gateway",
+        "AWS Snowball",
+        "AWS DataSync"
+      ]
+    },
+    {
+      "id": 11,
+      "originalNumber": 3,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS se utiliza como puente entre almacenamiento local y almacenamiento en la nube?",
+      "options": {
+        "A": "Amazon S3",
+        "B": "AWS Snowball",
+        "C": "AWS Storage Gateway",
+        "D": "AWS DataSync"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) AWS Storage Gateway.",
+      "services": [
+        "Amazon S3",
+        "AWS Storage Gateway",
+        "AWS Snowball",
+        "AWS DataSync"
+      ]
+    },
+    {
+      "id": 12,
+      "originalNumber": 4,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuál de las siguientes afirmaciones sobre costos de transferencia en Amazon S3 es correcta?",
+      "options": {
+        "A": "Tanto ingress como egress son gratuitos.",
+        "B": "Ingress tiene costo, egress es gratis.",
+        "C": "Ingress es gratis, egress tiene costo",
+        "D": "Ambos tienen costo fijo."
+      },
+      "correctAnswer": "C",
+      "explanation": "C) Ingress gratis, egress con costo.",
+      "services": [
+        "Amazon S3"
+      ]
+    },
+    {
+      "id": 13,
+      "originalNumber": 1,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS es una base de datos relacional administrada compatible con MySQL, PostgreSQL, Oracle y SQL Server?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon Aurora",
+        "C": "Amazon Neptune",
+        "D": "DynamoDB"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Amazon RDS → servicio administrado multi-motor de SQL.",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 14,
+      "originalNumber": 2,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Cuál es la principal ventaja de Amazon Aurora frente a Amazon RDS estándar?",
+      "options": {
+        "A": "Tiene menos compatibilidad con motores",
+        "B": "Es más lenta pero más barata",
+        "C": "Ofrece mayor rendimiento y escalabilidad",
+        "D": "Solo funciona con Microsoft SQL Server"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) Aurora → más rápida, escalable y optimizada por AWS.",
+      "services": [
+        "Amazon Aurora",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 15,
+      "originalNumber": 3,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS usarías para analizar conexiones entre usuarios en una red social?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon Aurora",
+        "C": "Amazon Neptune",
+        "D": "DynamoDB"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) Amazon Neptune → diseñado para grafos y relaciones.",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 16,
+      "originalNumber": 4,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué característica es común en Amazon RDS y Aurora?",
+      "options": {
+        "A": "Ambos soportan bases de datos de grafos",
+        "B": "Ambos ofrecen administración automática de parches",
+        "C": "Ambos solo permiten uso con Oracle",
+        "D": "Ambos reemplazan a DynamoDB"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) RDS y Aurora automatizan respaldos y parches.",
+      "services": [
+        "Amazon Aurora",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 17,
+      "originalNumber": 1,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS usarías para detectar rostros y emociones en una fotografía?",
+      "options": {
+        "A": "Amazon Comprehend",
+        "B": "Amazon Rekognition",
+        "C": "Amazon Textract",
+        "D": "AWS Lambda"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Amazon Rekognition → diseñado para análisis de imágenes y videos.",
+      "services": [
+        "Amazon Textract",
+        "Amazon Rekognition",
+        "Amazon Comprehend",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 18,
+      "originalNumber": 2,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuál de los siguientes servicios de AWS se utiliza para extraer texto y tablas de documentos escaneados?",
+      "options": {
+        "A": "Amazon Rekognition",
+        "B": "Amazon Textract",
+        "C": "Amazon Polly",
+        "D": "Amazon Translate"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Amazon Textract → extrae texto, datos y tablas de documentos.",
+      "services": [
+        "Amazon Textract",
+        "Amazon Polly",
+        "Amazon Rekognition",
+        "Amazon Translate"
+      ]
+    },
+    {
+      "id": 19,
+      "originalNumber": 3,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS permite analizar contenido de video para detectar material explícito o inapropiado?",
+      "options": {
+        "A": "Amazon Rekognition",
+        "B": "Amazon Textract",
+        "C": "Amazon SageMaker",
+        "D": "AWS Glue"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Amazon Textract → especializado en lectura y extracción de texto estructurado.",
+      "services": [
+        "Amazon Textract",
+        "Amazon Rekognition",
+        "Amazon SageMaker",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 20,
+      "originalNumber": 1,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Cuál de las siguientes perspectivas del AWS CAF se centra en las habilidades y capacitación del personal?",
+      "options": {
+        "A": "Business",
+        "B": "Platform",
+        "C": "Governance",
+        "D": "Operations"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Business → se enfoca en objetivos y resultados financieros.",
+      "services": []
+    },
+    {
+      "id": 21,
+      "originalNumber": 3,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué perspectiva del CAF aborda la arquitectura técnica, redes y seguridad de la infraestructura?",
+      "options": {
+        "A": "Platform",
+        "B": "Security",
+        "C": "Governance",
+        "D": "Operations"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Platform → diseña la infraestructura de la nube.",
+      "services": []
+    },
+    {
+      "id": 22,
+      "originalNumber": 4,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué perspectiva del CAF se centra en los procesos de control y cumplimiento normativo?",
+      "options": {
+        "A": "Governance",
+        "B": "Business",
+        "C": "Operations",
+        "D": "Security"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Governance → define políticas y control.",
+      "services": []
+    },
+    {
+      "id": 23,
+      "originalNumber": 1,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué plan de soporte de AWS incluye un Technical Account Manager (TAM)?",
+      "options": {
+        "A": "Developer",
+        "B": "Business",
+        "C": "Enterprise",
+        "D": "Basic"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) Enterprise → TAM dedicado y soporte prioritario.",
+      "services": []
+    },
+    {
+      "id": 24,
+      "originalNumber": 2,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Cuál es la principal diferencia entre el soporte Business y Developer?",
+      "options": {
+        "A": "El Business tiene acceso a Trusted Advisor completo",
+        "B": "El Developer incluye un TAM",
+        "C": "El Developer ofrece soporte 24/7",
+        "D": "El Business no permite casos críticos"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Business incluye Trusted Advisor completo.",
+      "services": [
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 25,
+      "originalNumber": 3,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué herramienta de AWS recomienda mejoras de seguridad, rendimiento y costos?",
+      "options": {
+        "A": "CloudWatch",
+        "B": "Trusted Advisor",
+        "C": "Config",
+        "D": "GuardDuty"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Trusted Advisor.",
+      "services": [
+        "Amazon GuardDuty",
+        "Amazon CloudWatch",
+        "AWS Config",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 26,
+      "originalNumber": 4,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué servicio contiene artículos técnicos con soluciones a problemas comunes?",
+      "options": {
+        "A": "AWS Trusted Advisor",
+        "B": "AWS Support Center",
+        "C": "AWS Knowledge Base",
+        "D": "AWS CloudTrail"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) Knowledge Base → artículos y documentación técnica.",
+      "services": [
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 27,
+      "originalNumber": 1,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS ofrece 1 millón de solicitudes gratuitas por mes sin límite de tiempo?",
+      "options": {
+        "A": "Amazon CloudWatch",
+        "B": "AWS Lambda",
+        "C": "Amazon EC2",
+        "D": "Amazon S3"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) AWS Lambda → Always Free con 1 millón de solicitudes al mes. ejecución.",
+      "services": [
+        "Amazon S3",
+        "Amazon CloudWatch",
+        "Amazon EC2",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 28,
+      "originalNumber": 2,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuál de los siguientes servicios es parte del Always Free Tier y permite el envío gratuito de notificaciones?",
+      "options": {
+        "A": "Amazon SQS",
+        "B": "Amazon SNS",
+        "C": "Amazon EC2",
+        "D": "AWS Glue"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Amazon SNS → 1 millón de notificaciones gratis cada mes.",
+      "services": [
+        "Amazon EC2",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 29,
+      "originalNumber": 3,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué cantidad de almacenamiento gratuito ofrece Amazon S3 en el Free Tier?",
+      "options": {
+        "A": "1 GB",
+        "B": "5 GB",
+        "C": "10 GB",
+        "D": "25 GB"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) 5 GB → durante 12 meses.",
+      "services": [
+        "Amazon S3"
+      ]
+    },
+    {
+      "id": 30,
+      "originalNumber": 4,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuál de los siguientes servicios permanece gratuito indefinidamente dentro de sus límites?",
+      "options": {
+        "A": "Amazon EC2",
+        "B": "Amazon S3",
+        "C": "AWS Lambda",
+        "D": "Amazon RDS"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) AWS Lambda → “Always Free” sin límite de tiempo.",
+      "services": [
+        "Amazon S3",
+        "Amazon EC2",
+        "Amazon RDS",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 31,
+      "originalNumber": 5,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué ocurre si un usuario excede los límites del Free Tier?",
+      "options": {
+        "A": "AWS elimina los recursos automáticamente.",
+        "B": "AWS suspende la cuenta temporalmente.",
+        "C": "Se aplican las tarifas normales del servicio",
+        "D": "El servicio se detiene sin costo adicional."
+      },
+      "correctAnswer": "C",
+      "explanation": "C) Si excedes el límite gratuito, AWS cobra las tarifas estándar.",
+      "services": []
+    },
+    {
+      "id": 32,
+      "originalNumber": 1,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio de AWS protege contra ataques DDoS?",
+      "options": {
+        "A": "AWS WAF",
+        "B": "AWS Shield",
+        "C": "Amazon Guard Duty",
+        "D": "Amazon Inspector"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) AWS Shield protege contra ataques DDoS.",
+      "services": [
+        "Amazon Inspector",
+        "AWS Shield",
+        "AWS WAF"
+      ]
+    },
+    {
+      "id": 33,
+      "originalNumber": 2,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio analiza registros como CloudTrail y VPC Flow Logs para detectar comportamientos sospechosos?",
+      "options": {
+        "A": "AWS Shield",
+        "B": "Amazon GuardDuty",
+        "C": "AWS WAF",
+        "D": "AWS Config"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Guard Duty.",
+      "services": [
+        "Amazon GuardDuty",
+        "AWS Shield",
+        "AWS WAF",
+        "Amazon VPC",
+        "AWS Config",
+        "AWS CloudTrail"
+      ]
+    },
+    {
+      "id": 34,
+      "originalNumber": 3,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Cuál de las siguientes tareas pertenece al cliente según el modelo de responsabilidad compartida?",
+      "options": {
+        "A": "Proteger la red global de AWS",
+        "B": "Mantener la infraestructura física",
+        "C": "Configurar usuarios y permisos en IAM",
+        "D": "Monitorear centros de datos"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) Configurar IAM.",
+      "services": [
+        "AWS IAM",
+        "AWS Config"
+      ]
+    },
+    {
+      "id": 35,
+      "originalNumber": 4,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio se usa para evaluar vulnerabilidades en instancias EC2?",
+      "options": {
+        "A": "Amazon Inspector",
+        "B": "Amazon GuardDuty",
+        "C": "AWS WAF",
+        "D": "AWS Trusted Advisor"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Inspector.",
+      "services": [
+        "Amazon GuardDuty",
+        "Amazon EC2",
+        "Amazon Inspector",
+        "AWS WAF",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 36,
+      "originalNumber": 5,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio protege aplicaciones web contra inyecciones SQL o XSS?",
+      "options": {
+        "A": "AWS WAF",
+        "B": "AWS Shield",
+        "C": "Amazon Inspector",
+        "D": "CloudWatch"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) WAF.",
+      "services": [
+        "Amazon CloudWatch",
+        "Amazon Inspector",
+        "AWS Shield",
+        "AWS WAF"
+      ]
+    },
+    {
+      "id": 37,
+      "originalNumber": 6,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio proporciona artículos técnicos de ayuda y resolución de problemas?",
+      "options": {
+        "A": "AWS Knowledge Base",
+        "B": "Trusted Advisor",
+        "C": "CloudTrail",
+        "D": "Guard Duty"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Knowledge Base.",
+      "services": [
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 38,
+      "originalNumber": 7,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio almacena imágenes Docker de forma segura?",
+      "options": {
+        "A": "Amazon EKS",
+        "B": "Amazon ECS",
+        "C": "Amazon ECR",
+        "D": "AWS Lambda"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) ECR.",
+      "services": [
+        "Amazon ECR",
+        "Amazon EKS",
+        "Amazon ECS",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 39,
+      "originalNumber": 8,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio orquesta contenedores utilizando Kubernetes estándar?",
+      "options": {
+        "A": "Amazon ECS",
+        "B": "Amazon EKS",
+        "C": "AWS Fargate",
+        "D": "Amazon EC2"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) EKS.",
+      "services": [
+        "Amazon EKS",
+        "Amazon EC2",
+        "AWS Fargate",
+        "Amazon ECS"
+      ]
+    },
+    {
+      "id": 40,
+      "originalNumber": 9,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio permite ejecutar contenedores sin administrar servidores?",
+      "options": {
+        "A": "AWS Lambda",
+        "B": "Amazon EKS",
+        "C": "Amazon ECS con Fargate",
+        "D": "Amazon ECR"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) ECS con Fargate.",
+      "services": [
+        "Amazon ECR",
+        "Amazon EKS",
+        "AWS Fargate",
+        "Amazon ECS",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 41,
+      "originalNumber": 10,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué tipo de instancia EC2 es ideal para cargas impredecibles?",
+      "options": {
+        "A": "Reserved",
+        "B": "Spot",
+        "C": "On-Demand",
+        "D": "Savings Plans"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) On-Demand.",
+      "services": [
+        "Amazon EC2"
+      ]
+    },
+    {
+      "id": 42,
+      "originalNumber": 11,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué opción ofrece el mayor ahorro, pero puede interrumpirse sin aviso?",
+      "options": {
+        "A": "Spot Instances",
+        "B": "Reserved",
+        "C": "On-Demand",
+        "D": "Savings Plans"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Spot instances.",
+      "services": []
+    },
+    {
+      "id": 43,
+      "originalNumber": 12,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio recomienda tipos de instancia EC2 según uso real?",
+      "options": {
+        "A": "Trusted Advisor",
+        "B": "Compute Optimizer",
+        "C": "CloudWatch",
+        "D": "CloudTrail"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Compute Optimizer.",
+      "services": [
+        "Amazon CloudWatch",
+        "Amazon EC2",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 44,
+      "originalNumber": 13,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué opción de compra requiere un compromiso de 1 a 3 años?",
+      "options": {
+        "A": "Reserved Instances",
+        "B": "On-Demand",
+        "C": "Spot",
+        "D": "Savings Plans"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Reserved Instances.",
+      "services": []
+    },
+    {
+      "id": 45,
+      "originalNumber": 14,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué opción ofrece descuentos por comprometer un gasto por hora ($/hora), no tipo de instancia?",
+      "options": {
+        "A": "Spot",
+        "B": "Savings Plans",
+        "C": "Reserved",
+        "D": "On-Demand"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Savings Plans.",
+      "services": []
+    },
+    {
+      "id": 46,
+      "originalNumber": 15,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece almacenamiento de objetos escalables en AWS?",
+      "options": {
+        "A": "Amazon EBS",
+        "B": "Amazon S3",
+        "C": "Amazon Glacier",
+        "D": "Amazon EFS"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) S3.",
+      "services": [
+        "Amazon S3",
+        "Amazon EBS",
+        "Amazon EFS"
+      ]
+    },
+    {
+      "id": 47,
+      "originalNumber": 16,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué clase de S3 se usa para archivos de muy largo plazo con recuperación en horas?",
+      "options": {
+        "A": "S3 Standard",
+        "B": "S3 Glacier Deep Archive",
+        "C": "S3 One Zone-IA",
+        "D": "S3 Intelligent-Tiering"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Glacier Deep Archive.",
+      "services": [
+        "Amazon S3"
+      ]
+    },
+    {
+      "id": 48,
+      "originalNumber": 17,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio transfiere datos rápidamente entre entornos locales y AWS usando conexión de red?",
+      "options": {
+        "A": "AWS Snowball",
+        "B": "AWS DataSync",
+        "C": "AWS Storage Gateway",
+        "D": "AWS Transfer Family"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) DataSync.",
+      "services": [
+        "AWS Storage Gateway",
+        "AWS Snowball",
+        "AWS DataSync"
+      ]
+    },
+    {
+      "id": 49,
+      "originalNumber": 18,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio usa dispositivos físicos para trasladar grandes volúmenes de datos hacia AWS?",
+      "options": {
+        "A": "AWS DataSync",
+        "B": "AWS Snowball",
+        "C": "AWS Glue",
+        "D": "AWS Storage Gateway"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Snowball.",
+      "services": [
+        "AWS Storage Gateway",
+        "AWS Snowball",
+        "AWS DataSync",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 50,
+      "originalNumber": 19,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio conecta almacenamiento local con almacenamiento en la nube?",
+      "options": {
+        "A": "Amazon S3",
+        "B": "AWS Storage Gateway",
+        "C": "AWS Snowball",
+        "D": "AWS Backup"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Storage Gateway.",
+      "services": [
+        "Amazon S3",
+        "AWS Storage Gateway",
+        "AWS Snowball"
+      ]
+    },
+    {
+      "id": 51,
+      "originalNumber": 21,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio es una base de datos relacional administrada multi-motor?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon Neptune",
+        "C": "Amazon DynamoDB",
+        "D": "AWS Glue"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) RDS.",
+      "services": [
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 52,
+      "originalNumber": 22,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece una base de datos relacional optimizada por AWS?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon Aurora",
+        "C": "Amazon Neptune",
+        "D": "DynamoDB"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Aurora.",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 53,
+      "originalNumber": 23,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio usa un modelo de grafos para relaciones complejas?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon Aurora",
+        "C": "Amazon Neptune",
+        "D": "DynamoDB"
+      },
+      "correctAnswer": "C",
+      "explanation": "C) Neptune.",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 54,
+      "originalNumber": 24,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué característica es común entre RDS y Aurora?",
+      "options": {
+        "A": "Soporte para grafos",
+        "B": "Respaldos automáticos",
+        "C": "Compatibilidad con NoSQL",
+        "D": "Gratis por siempre"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Respaldos automáticos.",
+      "services": [
+        "Amazon Aurora",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 55,
+      "originalNumber": 25,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio detecta rostros y emociones en imágenes o videos?",
+      "options": {
+        "A": "Amazon Comprehend",
+        "B": "Amazon Rekognition",
+        "C": "Amazon Textract",
+        "D": "AWS Translate"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Rekognition.",
+      "services": [
+        "Amazon Textract",
+        "Amazon Rekognition",
+        "Amazon Translate",
+        "Amazon Comprehend"
+      ]
+    },
+    {
+      "id": 56,
+      "originalNumber": 26,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio extrae texto y tablas de documentos escaneados?",
+      "options": {
+        "A": "Amazon Rekognition",
+        "B": "Amazon Textract",
+        "C": "Amazon Transcribe",
+        "D": "Amazon Polly"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Textract.",
+      "services": [
+        "Amazon Textract",
+        "Amazon Polly",
+        "Amazon Rekognition",
+        "Amazon Transcribe"
+      ]
+    },
+    {
+      "id": 57,
+      "originalNumber": 27,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio convierte texto en voz natural?",
+      "options": {
+        "A": "Amazon Transcribe",
+        "B": "Amazon Polly",
+        "C": "Amazon Comprehend",
+        "D": "AWS Lambda"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Polly.",
+      "services": [
+        "Amazon Polly",
+        "Amazon Comprehend",
+        "AWS Lambda",
+        "Amazon Transcribe"
+      ]
+    },
+    {
+      "id": 58,
+      "originalNumber": 28,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio convierte voz en texto?",
+      "options": {
+        "A": "Amazon Transcribe",
+        "B": "Amazon Translate",
+        "C": "Amazon Rekognition",
+        "D": "Amazon Polly"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Transcribe.",
+      "services": [
+        "Amazon Polly",
+        "Amazon Rekognition",
+        "Amazon Translate",
+        "Amazon Transcribe"
+      ]
+    },
+    {
+      "id": 59,
+      "originalNumber": 29,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio detecta sentimientos y analiza texto natural?",
+      "options": {
+        "A": "Amazon Comprehend",
+        "B": "Amazon Rekognition",
+        "C": "Amazon Textract",
+        "D": "AWS Glue"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Comprehend.",
+      "services": [
+        "Amazon Textract",
+        "Amazon Rekognition",
+        "Amazon Comprehend",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 60,
+      "originalNumber": 30,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué perspectiva del CAF se centra en las habilidades y roles del personal?",
+      "options": {
+        "A": "People",
+        "B": "Platform",
+        "C": "Governance",
+        "D": "Security"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) People.",
+      "services": []
+    },
+    {
+      "id": 61,
+      "originalNumber": 31,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué perspectiva del CAF se enfoca en objetivos de negocio y ROI?",
+      "options": {
+        "A": "Business",
+        "B": "Platform",
+        "C": "Security",
+        "D": "Opérations"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Business.",
+      "services": []
+    },
+    {
+      "id": 62,
+      "originalNumber": 32,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué perspectiva define políticas, cumplimiento y control?",
+      "options": {
+        "A": "Governance",
+        "B": "Security",
+        "C": "Platform",
+        "D": "Opérations"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Governance.",
+      "services": []
+    },
+    {
+      "id": 63,
+      "originalNumber": 33,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué perspectiva diseña la infraestructura técnica en la nube?",
+      "options": {
+        "A": "Platform",
+        "B": "Operations",
+        "C": "Business",
+        "D": "Security"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Platform.",
+      "services": []
+    },
+    {
+      "id": 64,
+      "originalNumber": 34,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué perspectiva se enfoca en la gestión diaria y monitoreo?",
+      "options": {
+        "A": "Operations",
+        "B": "Security",
+        "C": "Business",
+        "D": "Governance"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Operaciones.",
+      "services": []
+    },
+    {
+      "id": 65,
+      "originalNumber": 35,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué plan de soporte incluye un Technical Account Manager (TAM)?",
+      "options": {
+        "A": "Business",
+        "B": "Enterprise",
+        "C": "Developer",
+        "D": "Basic"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Enterprise.",
+      "services": []
+    },
+    {
+      "id": 66,
+      "originalNumber": 36,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué herramienta recomienda mejoras en seguridad, costos y rendimiento?",
+      "options": {
+        "A": "AWS Config",
+        "B": "Trusted Advisor",
+        "C": "CloudTrail",
+        "D": "Inspector"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Trusted Advisor.",
+      "services": [
+        "Amazon Inspector",
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 67,
+      "originalNumber": 37,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio contiene artículos técnicos de resolución de problemas?",
+      "options": {
+        "A": "Knowledge Base",
+        "B": "Support Center",
+        "C": "CloudTrail",
+        "D": "Inspector"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Knowledge Base.",
+      "services": [
+        "Amazon Inspector",
+        "AWS CloudTrail"
+      ]
+    },
+    {
+      "id": 68,
+      "originalNumber": 38,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué plan de soporte es gratuito y solo ofrece documentación?",
+      "options": {
+        "A": "Developer",
+        "B": "Basic",
+        "C": "Business",
+        "D": "Enterprise"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Basic.",
+      "services": []
+    },
+    {
+      "id": 69,
+      "originalNumber": 39,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué plan de soporte está diseñado para entornos de prueba y desarrollo?",
+      "options": {
+        "A": "Developer",
+        "B": "Business",
+        "C": "Basic",
+        "D": "Enterprise"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Developer.",
+      "services": []
+    },
+    {
+      "id": 70,
+      "originalNumber": 40,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece 1 millón de solicitudes gratuitas por mes sin límite de tiempo?",
+      "options": {
+        "A": "Amazon S3",
+        "B": "AWS Lambda",
+        "C": "Amazon EC2",
+        "D": "Amazon RDS"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Lambda.",
+      "services": [
+        "Amazon S3",
+        "Amazon EC2",
+        "Amazon RDS",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 71,
+      "originalNumber": 41,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece 5 GB gratuitos de almacenamiento durante 12 meses?",
+      "options": {
+        "A": "Amazon DynamoDB",
+        "B": "Amazon S3",
+        "C": "Amazon EC2",
+        "D": "AWS Glue"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) S3.",
+      "services": [
+        "Amazon S3",
+        "Amazon EC2",
+        "Amazon DynamoDB",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 72,
+      "originalNumber": 42,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece 25 GB gratuitos de base de datos NoSQL de forma permanente?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon DynamoDB",
+        "C": "Amazon Aurora",
+        "D": "Amazon Redshift"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) DynamoDB.",
+      "services": [
+        "Amazon Aurora",
+        "Amazon DynamoDB",
+        "Amazon RDS",
+        "Amazon Redshift"
+      ]
+    },
+    {
+      "id": 73,
+      "originalNumber": 43,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece 1 millón de notificaciones mensuales gratuitas?",
+      "options": {
+        "A": "Amazon SNS",
+        "B": "Amazon SQS",
+        "C": "AWS Lambda",
+        "D": "Amazon EC2"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) SNS.",
+      "services": [
+        "Amazon EC2",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 74,
+      "originalNumber": 44,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué ocurre si superas los límites del Free Tier?",
+      "options": {
+        "A": "AWS elimina la cuenta",
+        "B": "Se aplican tarifas normales",
+        "C": "No pasa nada",
+        "D": "El servicio se detiene automáticamente"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Se aplican tarifas normales.",
+      "services": []
+    },
+    {
+      "id": 75,
+      "originalNumber": 45,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuántas horas gratuitas al mes ofrece Amazon EC2 en el Free Tier?",
+      "options": {
+        "A": "500",
+        "B": "750",
+        "C": "1000",
+        "D": "150"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) 750 horas.",
+      "services": [
+        "Amazon EC2"
+      ]
+    },
+    {
+      "id": 76,
+      "originalNumber": 46,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio sirve para monitorear el rendimiento de tus recursos AWS?",
+      "options": {
+        "A": "CloudWatch",
+        "B": "CloudTrail",
+        "C": "Config",
+        "D": "Trusted Advisor"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) CloudWatch.",
+      "services": [
+        "Amazon CloudWatch",
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 77,
+      "originalNumber": 47,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio registra todas las llamadas a la API en tu cuenta AWS?",
+      "options": {
+        "A": "AWS CloudTrail",
+        "B": "CloudWatch",
+        "C": "Inspector",
+        "D": "Shield"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) CloudTrail.",
+      "services": [
+        "Amazon CloudWatch",
+        "Amazon Inspector",
+        "AWS Shield",
+        "AWS CloudTrail"
+      ]
+    },
+    {
+      "id": 78,
+      "originalNumber": 48,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio se usa para definir identidades y permisos de acceso?",
+      "options": {
+        "A": "IAM",
+        "B": "CloudTrail",
+        "C": "Shield",
+        "D": "Trusted Advisor"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) IAM.",
+      "services": [
+        "AWS IAM",
+        "AWS Shield",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 79,
+      "originalNumber": 49,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué herramienta te avisa cuando un servicio alcanza un límite de uso?",
+      "options": {
+        "A": "Trusted Advisor",
+        "B": "CloudTrail",
+        "C": "Config",
+        "D": "Guard Duty"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Trusted Advisor.",
+      "services": [
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 80,
+      "originalNumber": 50,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio permite ejecutar código sin servidores?",
+      "options": {
+        "A": "AWS Lambda",
+        "B": "Amazon EC2",
+        "C": "Amazon ECS",
+        "D": "AWS Batch"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Lambda.",
+      "services": [
+        "Amazon EC2",
+        "Amazon ECS",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 81,
+      "originalNumber": 51,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio de AWS se usa para enviar mensajes entre aplicaciones (colas)?",
+      "options": {
+        "A": "Amazon SNS",
+        "B": "Amazon SQS",
+        "C": "Amazon MQ",
+        "D": "CloudWatch"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) SQS.",
+      "services": [
+        "Amazon CloudWatch"
+      ]
+    },
+    {
+      "id": 82,
+      "originalNumber": 52,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS traduce texto a otros idiomas?",
+      "options": {
+        "A": "Amazon Polly",
+        "B": "Amazon Translate",
+        "C": "Amazon Comprehend",
+        "D": "AWS Glue"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Translate.",
+      "services": [
+        "Amazon Polly",
+        "Amazon Translate",
+        "Amazon Comprehend",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 83,
+      "originalNumber": 53,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio gestiona y cifra claves de seguridad?",
+      "options": {
+        "A": "AWS Secrets Manager",
+        "B": "AWS Key Management Service (KMS)",
+        "C": "AWS Certificate Manager",
+        "D": "IAM"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) KMS.",
+      "services": [
+        "AWS IAM",
+        "AWS Secrets Manager",
+        "AWS KMS",
+        "AWS Certificate Manager"
+      ]
+    },
+    {
+      "id": 84,
+      "originalNumber": 54,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ejecuta consultas SQL sobre datos en S3 sin moverlos?",
+      "options": {
+        "A": "Amazon Athena",
+        "B": "AWS Glue",
+        "C": "Amazon Redshift",
+        "D": "Amazon RDS"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Athena.",
+      "services": [
+        "Amazon S3",
+        "Amazon RDS",
+        "Amazon Redshift",
+        "Amazon Athena",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 85,
+      "originalNumber": 55,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS se usa para crear y entrenar modelos de Machine Learning?",
+      "options": {
+        "A": "Amazon SageMaker",
+        "B": "Amazon Textract",
+        "C": "Amazon Rekognition",
+        "D": "AWS Lambda"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) SageMaker.",
+      "services": [
+        "Amazon Textract",
+        "Amazon Rekognition",
+        "Amazon SageMaker",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 86,
+      "originalNumber": 56,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio sincroniza archivos entre sistemas locales y S3?",
+      "options": {
+        "A": "AWS DataSync",
+        "B": "AWS Glue",
+        "C": "AWS Transfer",
+        "D": "Amazon CloudFront"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) DataSync.",
+      "services": [
+        "Amazon CloudFront",
+        "Amazon S3",
+        "AWS DataSync",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 87,
+      "originalNumber": 57,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué herramienta AWS ayuda a rastrear cambios en configuraciones de recursos?",
+      "options": {
+        "A": "AWS Config",
+        "B": "CloudTrail",
+        "C": "Guard Duty",
+        "D": "Inspector"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Config.",
+      "services": [
+        "Amazon Inspector",
+        "AWS Config",
+        "AWS CloudTrail"
+      ]
+    },
+    {
+      "id": 88,
+      "originalNumber": 58,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio distribuye contenido a nivel mundial reduciendo la latencia?",
+      "options": {
+        "A": "Amazon Route 53",
+        "B": "Amazon CloudFront",
+        "C": "AWS Global Accelerator",
+        "D": "Elastic Load Balancing"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) CloudFront.",
+      "services": [
+        "Amazon CloudFront",
+        "Elastic Load Balancing",
+        "Amazon Route 53"
+      ]
+    },
+    {
+      "id": 89,
+      "originalNumber": 59,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio administra nombres de dominio y realiza balanceo de tráfico DNS?",
+      "options": {
+        "A": "CloudFront",
+        "B": "Route 53",
+        "C": "Elastic Beanstalk",
+        "D": "Global Accelerator"
+      },
+      "correctAnswer": "B",
+      "explanation": "B) Route 53.",
+      "services": [
+        "Amazon CloudFront",
+        "AWS Elastic Beanstalk",
+        "Amazon Route 53"
+      ]
+    },
+    {
+      "id": 90,
+      "originalNumber": 60,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio integra datos, los prepara y transforma para análisis?",
+      "options": {
+        "A": "AWS Shield",
+        "B": "Amazon GuardDuty",
+        "C": "Amazon Inspector",
+        "D": "AWS Trusted Advisor"
+      },
+      "correctAnswer": "B",
+      "explanation": "A) Glue.",
+      "services": [
+        "Amazon GuardDuty",
+        "Amazon Inspector",
+        "AWS Shield",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 91,
+      "originalNumber": 3,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio ayuda a proteger tus aplicaciones web de inyecciones SQL y XSS?",
+      "options": {
+        "A": "Gestionar usuarios IAM",
+        "B": "Configurar redes VPC",
+        "C": "Proteger la infraestructura física",
+        "D": "Encriptar tus datos de aplicación"
+      },
+      "correctAnswer": "C",
+      "explanation": "",
+      "services": [
+        "AWS IAM",
+        "Amazon VPC",
+        "AWS Config"
+      ]
+    },
+    {
+      "id": 92,
+      "originalNumber": 5,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio identifica vulnerabilidades en instancias EC2 y contenedores?",
+      "options": {
+        "A": "AWS Config",
+        "B": "Amazon Inspector",
+        "C": "Guard Duty",
+        "D": "AWS Shield"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon EC2",
+        "Amazon Inspector",
+        "AWS Shield",
+        "AWS Config"
+      ]
+    },
+    {
+      "id": 93,
+      "originalNumber": 6,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Cuál de los siguientes servicios ofrece artículos técnicos y guías de soporte?",
+      "options": {
+        "A": "Trusted Advisor",
+        "B": "AWS Knowledge Base",
+        "C": "CloudTrail",
+        "D": "Config"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 94,
+      "originalNumber": 7,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ejecuta contenedores Docker con integración nativa en AWS?",
+      "options": {
+        "A": "Amazon ECS",
+        "B": "Amazon EKS",
+        "C": "AWS Fargate",
+        "D": "Amazon ECR"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon ECR",
+        "Amazon EKS",
+        "AWS Fargate",
+        "Amazon ECS"
+      ]
+    },
+    {
+      "id": 95,
+      "originalNumber": 9,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Dónde almacenas imágenes Docker de forma segura dentro de AWS?",
+      "options": {
+        "A": "Amazon EKS",
+        "B": "AWS Fargate",
+        "C": "AWS Batch",
+        "D": "Amazon EC2"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon EKS",
+        "Amazon EC2",
+        "AWS Fargate"
+      ]
+    },
+    {
+      "id": 96,
+      "originalNumber": 11,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio proporciona capacidad de cómputo escalable bajo demanda?",
+      "options": {
+        "A": "AWS Lambda",
+        "B": "Amazon EC2",
+        "C": "AWS Batch",
+        "D": "AWS Elastic Beanstalk"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS Elastic Beanstalk",
+        "Amazon EC2",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 97,
+      "originalNumber": 12,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué tipo de instancia EC2 ofrece el mayor ahorro pero puede interrumpirse sin aviso?",
+      "options": {
+        "A": "Reserved",
+        "B": "Spot",
+        "C": "On-Demand",
+        "D": "Savings Plans"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon EC2"
+      ]
+    },
+    {
+      "id": 98,
+      "originalNumber": 13,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué opción de compra requiere compromiso a largo plazo de 1–3 años?",
+      "options": {
+        "A": "Reserved Instances",
+        "B": "On-Demand",
+        "C": "Spot",
+        "D": "Savings Plans"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 99,
+      "originalNumber": 14,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio recomienda tipos de instancia según tu uso?",
+      "options": {
+        "A": "CloudWatch",
+        "B": "AWS Compute Optimizer",
+        "C": "AWS Config",
+        "D": "AWS Billing"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon CloudWatch",
+        "AWS Config"
+      ]
+    },
+    {
+      "id": 100,
+      "originalNumber": 15,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué opción ofrece ahorro flexible comprometiendo gasto por ($/hora), y no tipo de instancia?",
+      "options": {
+        "A": "Savings Plans",
+        "B": "Spot",
+        "C": "Reserved",
+        "D": "On-Demand"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 101,
+      "originalNumber": 16,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece almacenamiento de objetos?",
+      "options": {
+        "A": "Amazon EFS",
+        "B": "Amazon S3",
+        "C": "Amazon EBS",
+        "D": "AWS Backup"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "Amazon EBS",
+        "Amazon EFS"
+      ]
+    },
+    {
+      "id": 102,
+      "originalNumber": 17,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué clase de S3 es ideal para archivos a muy largo plazo?",
+      "options": {
+        "A": "S3 Glacier Deep Archive",
+        "B": "S3 Intelligent-Tiering",
+        "C": "S3 One Zone-IA",
+        "D": "S3 Standard"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon S3"
+      ]
+    },
+    {
+      "id": 103,
+      "originalNumber": 18,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio migra datos locales a AWS mediante red segura y rápida?",
+      "options": {
+        "A": "Data Sync",
+        "B": "AWS Snowball",
+        "C": "Storage Gateway",
+        "D": "Transfer Family"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS Storage Gateway",
+        "AWS Snowball"
+      ]
+    },
+    {
+      "id": 104,
+      "originalNumber": 20,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio conecta entornos locales con almacenamiento AWS?",
+      "options": {
+        "A": "AWS Storage Gateway",
+        "B": "AWS Backup",
+        "C": "AWS Glue",
+        "D": "AWS Transit Gateway"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "AWS Storage Gateway",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 105,
+      "originalNumber": 21,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece bases de datos relacionales administradas?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon DynamoDB",
+        "C": "Amazon Aurora",
+        "D": "Amazon Neptune"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 106,
+      "originalNumber": 22,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio es una base relacional compatible con MySQL y optimizada por AWS?",
+      "options": {
+        "A": "Amazon Aurora",
+        "B": "Amazon RDS",
+        "C": "Amazon Neptune",
+        "D": "Amazon Redshift"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon RDS",
+        "Amazon Redshift"
+      ]
+    },
+    {
+      "id": 107,
+      "originalNumber": 23,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio maneja grafos para detectar relaciones complejas?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon Aurora",
+        "C": "Amazon Neptune",
+        "D": "Amazon DynamoDB"
+      },
+      "correctAnswer": "C",
+      "explanation": "",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 108,
+      "originalNumber": 24,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio NoSQL proporciona baja latencia y escalado automático?",
+      "options": {
+        "A": "Amazon Neptune",
+        "B": "Amazon DynamoDB",
+        "C": "Amazon Aurora",
+        "D": "Amazon RDS"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 109,
+      "originalNumber": 25,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio analiza imágenes y detecta rostros?",
+      "options": {
+        "A": "Amazon Rekognition",
+        "B": "Amazon Textract",
+        "C": "Amazon Transcribe",
+        "D": "Amazon Comprehend"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Textract",
+        "Amazon Rekognition",
+        "Amazon Comprehend",
+        "Amazon Transcribe"
+      ]
+    },
+    {
+      "id": 110,
+      "originalNumber": 26,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio extrae texto de documentos escaneados?",
+      "options": {
+        "A": "Amazon Rekognition",
+        "B": "Amazon Textract",
+        "C": "Amazon Comprehend",
+        "D": "AWS Glue"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon Textract",
+        "Amazon Rekognition",
+        "Amazon Comprehend",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 111,
+      "originalNumber": 27,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio analiza sentimientos en texto?",
+      "options": {
+        "A": "Amazon Translate",
+        "B": "Amazon Comprehend",
+        "C": "Amazon Textract",
+        "D": "AWS Lambda"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon Textract",
+        "Amazon Translate",
+        "Amazon Comprehend",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 112,
+      "originalNumber": 28,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio convierte voz a texto?",
+      "options": {
+        "A": "Amazon Transcribe",
+        "B": "Amazon Polly",
+        "C": "AWS Glue",
+        "D": "Amazon Rekognition"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Polly",
+        "Amazon Rekognition",
+        "Amazon Transcribe",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 113,
+      "originalNumber": 29,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio convierte texto en voz natural?",
+      "options": {
+        "A": "Amazon Polly",
+        "B": "Amazon Translate",
+        "C": "AWS Lambda",
+        "D": "Amazon Comprehend"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Polly",
+        "Amazon Translate",
+        "Amazon Comprehend",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 114,
+      "originalNumber": 30,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué perspectiva se enfoca en definir métricas y objetivos de negocio?",
+      "options": {
+        "A": "Business",
+        "B": "Governance",
+        "C": "Platform",
+        "D": "Opérations"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 115,
+      "originalNumber": 31,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué perspectiva trata sobre capacitación y gestión del cambio?**",
+      "options": {
+        "A": "People",
+        "B": "Security",
+        "C": "Governance",
+        "D": "Opérations"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) People.",
+      "services": []
+    },
+    {
+      "id": 116,
+      "originalNumber": 32,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué perspectiva define políticas y cumplimiento normativo?**",
+      "options": {
+        "A": "Governance",
+        "B": "Platform",
+        "C": "Operations",
+        "D": "Security"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Governance.",
+      "services": []
+    },
+    {
+      "id": 117,
+      "originalNumber": 33,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué perspectiva diseña la infraestructura técnica?**",
+      "options": {
+        "A": "Platform",
+        "B": "Security",
+        "C": "Operations",
+        "D": "Business"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Platform.",
+      "services": []
+    },
+    {
+      "id": 118,
+      "originalNumber": 34,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué perspectiva se encarga del monitoreo continuo y mantenimiento?**",
+      "options": {
+        "A": "Operations",
+        "B": "Governance",
+        "C": "Business",
+        "D": "Platform"
+      },
+      "correctAnswer": "A",
+      "explanation": "A) Operaciones.",
+      "services": []
+    },
+    {
+      "id": 119,
+      "originalNumber": 35,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué plan de soporte incluye un TAM (Technical Account Manager)?",
+      "options": {
+        "A": "Business",
+        "B": "Enterprise",
+        "C": "Developer",
+        "D": "Basic"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 120,
+      "originalNumber": 36,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué plan es gratuito y solo brinda documentación y foros?",
+      "options": {
+        "A": "Basic",
+        "B": "Developer",
+        "C": "Business",
+        "D": "Enterprise"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 121,
+      "originalNumber": 37,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué herramienta revisa seguridad, costos y rendimiento?",
+      "options": {
+        "A": "Trusted Advisor",
+        "B": "Config",
+        "C": "Guard Duty",
+        "D": "CloudWatch"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudWatch",
+        "AWS Config",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 122,
+      "originalNumber": 38,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio tiene artículos técnicos de soporte?",
+      "options": {
+        "A": "AWS Knowledge Base",
+        "B": "CloudTrail",
+        "C": "Inspector",
+        "D": "Config"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Inspector",
+        "AWS Config",
+        "AWS CloudTrail"
+      ]
+    },
+    {
+      "id": 123,
+      "originalNumber": 39,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué plan está diseñado para entornos de desarrollo y pruebas?",
+      "options": {
+        "A": "Developer",
+        "B": "Basic",
+        "C": "Business",
+        "D": "Enterprise"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 124,
+      "originalNumber": 40,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece 1 millón de solicitudes gratis mensuales sin límite de tiempo?",
+      "options": {
+        "A": "AWS Lambda",
+        "B": "Amazon S3",
+        "C": "Amazon EC2",
+        "D": "Amazon RDS"
+      },
+      "correctAnswer": "A",
+      "explanation": "Lambda (Always Free).",
+      "services": [
+        "Amazon S3",
+        "Amazon EC2",
+        "Amazon RDS",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 125,
+      "originalNumber": 41,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece 5 GB gratuitos por 12 meses?",
+      "options": {
+        "A": "Amazon DynamoDB",
+        "B": "Amazon S3",
+        "C": "AWS Glue",
+        "D": "Amazon EC2"
+      },
+      "correctAnswer": "B",
+      "explanation": "S3.",
+      "services": [
+        "Amazon S3",
+        "Amazon EC2",
+        "Amazon DynamoDB",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 126,
+      "originalNumber": 42,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio NoSQL ofrece 25 GB gratuitos de manera permanente?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon DynamoDB",
+        "C": "Amazon Neptune",
+        "D": "Amazon Aurora"
+      },
+      "correctAnswer": "B",
+      "explanation": "DynamoDB.",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 127,
+      "originalNumber": 43,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio ofrece 1 millón de notificaciones gratis cada mes?",
+      "options": {
+        "A": "Amazon SNS",
+        "B": "Amazon SQS",
+        "C": "AWS Lambda",
+        "D": "CloudWatch"
+      },
+      "correctAnswer": "A",
+      "explanation": "SNS.",
+      "services": [
+        "Amazon CloudWatch",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 128,
+      "originalNumber": 44,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué sucede si se excede el límite del Free Tier?",
+      "options": {
+        "A": "AWS borra recursos",
+        "B": "Se cobran tarifas estándar",
+        "C": "No ocurre nada",
+        "D": "Se detiene el servicio"
+      },
+      "correctAnswer": "B",
+      "explanation": "Se aplican precios normales.",
+      "services": []
+    },
+    {
+      "id": 129,
+      "originalNumber": 45,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuántas horas gratuitas de EC2 tienes por mes durante el primer año?",
+      "options": {
+        "A": "500",
+        "B": "750",
+        "C": "1000",
+        "D": "300"
+      },
+      "correctAnswer": "B",
+      "explanation": "750 horas.",
+      "services": [
+        "Amazon EC2"
+      ]
+    },
+    {
+      "id": 130,
+      "originalNumber": 46,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio permite distribuir contenido a nivel mundial con baja latencia?",
+      "options": {
+        "A": "Amazon CloudFront",
+        "B": "Amazon Route 53",
+        "C": "AWS Global Accelerator",
+        "D": "Elastic Beanstalk"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudFront",
+        "AWS Elastic Beanstalk",
+        "Amazon Route 53"
+      ]
+    },
+    {
+      "id": 131,
+      "originalNumber": 47,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio traduce texto a otros idiomas?",
+      "options": {
+        "A": "Amazon Comprehend",
+        "B": "Amazon Translate",
+        "C": "Amazon Polly",
+        "D": "AWS Glue"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon Polly",
+        "Amazon Translate",
+        "Amazon Comprehend",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 132,
+      "originalNumber": 48,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio registra todas las llamadas API en la cuenta?",
+      "options": {
+        "A": "AWS CloudTrail",
+        "B": "CloudWatch",
+        "C": "Inspector",
+        "D": "Config"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudWatch",
+        "Amazon Inspector",
+        "AWS Config",
+        "AWS CloudTrail"
+      ]
+    },
+    {
+      "id": 133,
+      "originalNumber": 49,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio ayuda a rastrear cambios en configuraciones de recursos?",
+      "options": {
+        "A": "AWS Config",
+        "B": "Guard Duty",
+        "C": "CloudTrail",
+        "D": "Shield"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "AWS Shield",
+        "AWS Config",
+        "AWS CloudTrail"
+      ]
+    },
+    {
+      "id": 134,
+      "originalNumber": 50,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio cifra datos y administra claves de cifrado?",
+      "options": {
+        "A": "AWS Key Management Service (KMS)",
+        "B": "Secrets Manager",
+        "C": "IAM",
+        "D": "CloudHSM"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "AWS IAM",
+        "AWS Secrets Manager",
+        "AWS KMS"
+      ]
+    },
+    {
+      "id": 135,
+      "originalNumber": 51,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ejecuta consultas SQL sobre datos en S3 sin moverlos?",
+      "options": {
+        "A": "Amazon Athena",
+        "B": "Amazon Redshift",
+        "C": "Glue",
+        "D": "RDS"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "Amazon RDS",
+        "Amazon Redshift",
+        "Amazon Athena",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 136,
+      "originalNumber": 52,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio entrena modelos de machine learning personalizados?",
+      "options": {
+        "A": "Amazon SageMaker",
+        "B": "Recognition",
+        "C": "Textract",
+        "D": "Comprehend"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Textract",
+        "Amazon Comprehend",
+        "Amazon SageMaker"
+      ]
+    },
+    {
+      "id": 137,
+      "originalNumber": 53,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio monitoriza métricas y logs de tus recursos AWS?",
+      "options": {
+        "A": "Amazon CloudWatch",
+        "B": "Trusted Advisor",
+        "C": "CloudTrail",
+        "D": "Config"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudWatch",
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 138,
+      "originalNumber": 54,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio gestiona nombres de dominio y DNS?",
+      "options": {
+        "A": "Route 53",
+        "B": "CloudFront",
+        "C": "Beanstalk",
+        "D": "Load Balancer"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudFront",
+        "Amazon Route 53"
+      ]
+    },
+    {
+      "id": 139,
+      "originalNumber": 55,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio permite automatizar tareas de respaldo de datos?",
+      "options": {
+        "A": "AWS Backup",
+        "B": "DataSync",
+        "C": "S3",
+        "D": "EBS"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "Amazon EBS",
+        "AWS DataSync"
+      ]
+    },
+    {
+      "id": 140,
+      "originalNumber": 56,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio se utiliza para analizar grandes volúmenes de datos estructurados en clústeres?",
+      "options": {
+        "A": "Amazon Redshift",
+        "B": "Athena",
+        "C": "Glue",
+        "D": "QuickSight"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon QuickSight",
+        "Amazon Redshift",
+        "Amazon Athena",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 141,
+      "originalNumber": 57,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio crea visualizaciones e informes interactivos en la nube?",
+      "options": {
+        "A": "Amazon QuickSight",
+        "B": "Redshift",
+        "C": "Glue",
+        "D": "Athena"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon QuickSight",
+        "Amazon Redshift",
+        "Amazon Athena",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 142,
+      "originalNumber": 58,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio administra certificados SSL/TLS en AWS?",
+      "options": {
+        "A": "AWS Certificate Manager (ACM)",
+        "B": "KMS",
+        "C": "IAM",
+        "D": "Inspector"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "AWS IAM",
+        "Amazon Inspector",
+        "AWS KMS",
+        "AWS Certificate Manager"
+      ]
+    },
+    {
+      "id": 143,
+      "originalNumber": 59,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio permite conectar redes VPC en diferentes regiones?",
+      "options": {
+        "A": "VPC Peering",
+        "B": "Route 53",
+        "C": "Transit Gateway",
+        "D": "CloudFront"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudFront",
+        "Amazon Route 53",
+        "Amazon VPC"
+      ]
+    },
+    {
+      "id": 144,
+      "originalNumber": 60,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio organiza recursos mediante etiquetas y control de acceso?",
+      "options": {
+        "A": "AWS Organizations",
+        "B": "IAM",
+        "C": "Config",
+        "D": "Control Tower"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "AWS IAM",
+        "AWS Organizations",
+        "AWS Config"
+      ]
+    },
+    {
+      "id": 145,
+      "originalNumber": 61,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué herramienta centraliza múltiples cuentas AWS con políticas comunes?",
+      "options": {
+        "A": "AWS Organizations",
+        "B": "Control Tower",
+        "C": "IAM",
+        "D": "Trusted Advisor"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "AWS IAM",
+        "AWS Organizations",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 146,
+      "originalNumber": 62,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece una red global de borde para entregar contenido con baja latencia?",
+      "options": {
+        "A": "CloudFront",
+        "B": "Route 53",
+        "C": "Global Accelerator",
+        "D": "Direct Connect"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudFront",
+        "Amazon Route 53",
+        "AWS Direct Connect"
+      ]
+    },
+    {
+      "id": 147,
+      "originalNumber": 63,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio proporciona conexión dedicada de red entre AWS y tu empresa?",
+      "options": {
+        "A": "AWS Direct Connect",
+        "B": "VPN",
+        "C": "CloudFront",
+        "D": "Transit Gateway"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudFront",
+        "AWS VPN",
+        "AWS Direct Connect"
+      ]
+    },
+    {
+      "id": 148,
+      "originalNumber": 64,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS se usa para crear APIs REST seguras?",
+      "options": {
+        "A": "Amazon API Gateway",
+        "B": "Elastic Beanstalk",
+        "C": "CloudFront",
+        "D": "Lambda"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudFront",
+        "AWS Elastic Beanstalk",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 149,
+      "originalNumber": 65,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio crea y gestiona entornos de aplicaciones automáticamente?",
+      "options": {
+        "A": "AWS Shield",
+        "B": "Amazon Guard Duty",
+        "C": "Amazon Inspector",
+        "D": "AWS Trusted Advisor"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon Inspector",
+        "AWS Shield",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 150,
+      "originalNumber": 3,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio ayuda a proteger tus aplicaciones web de inyecciones SQL y ataques XSS?",
+      "options": {
+        "A": "Gestionar usuarios IAM",
+        "B": "Configurar redes VPC",
+        "C": "Proteger la infraestructura física",
+        "D": "Encriptar tus datos de aplicación"
+      },
+      "correctAnswer": "C",
+      "explanation": "",
+      "services": [
+        "AWS IAM",
+        "Amazon VPC",
+        "AWS Config"
+      ]
+    },
+    {
+      "id": 151,
+      "originalNumber": 5,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio identifica vulnerabilidades en instancias EC2 y contenedores?",
+      "options": {
+        "A": "AWS Config",
+        "B": "Amazon Inspector",
+        "C": "Guard Duty",
+        "D": "AWS Shield"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon EC2",
+        "Amazon Inspector",
+        "AWS Shield",
+        "AWS Config"
+      ]
+    },
+    {
+      "id": 152,
+      "originalNumber": 6,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Cuál de los siguientes servicios ofrece artículos técnicos y guías de soporte?",
+      "options": {
+        "A": "Trusted Advisor",
+        "B": "AWS Knowledge Base",
+        "C": "CloudTrail",
+        "D": "Config"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 153,
+      "originalNumber": 7,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ejecuta contenedores Docker con integración nativa en AWS?",
+      "options": {
+        "A": "Amazon ECS",
+        "B": "Amazon EKS",
+        "C": "AWS Fargate",
+        "D": "Amazon ECR"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon ECR",
+        "Amazon EKS",
+        "AWS Fargate",
+        "Amazon ECS"
+      ]
+    },
+    {
+      "id": 154,
+      "originalNumber": 9,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Dónde almacenas imágenes Docker de forma segura dentro de AWS?",
+      "options": {
+        "A": "Amazon EKS",
+        "B": "AWS Fargate",
+        "C": "AWS Batch",
+        "D": "Amazon EC2"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon EKS",
+        "Amazon EC2",
+        "AWS Fargate"
+      ]
+    },
+    {
+      "id": 155,
+      "originalNumber": 11,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio proporciona capacidad de cómputo escalable bajo demanda?",
+      "options": {
+        "A": "AWS Lambda",
+        "B": "Amazon EC2",
+        "C": "AWS Batch",
+        "D": "AWS Elastic Beanstalk"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS Elastic Beanstalk",
+        "Amazon EC2",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 156,
+      "originalNumber": 12,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué tipo de instancia EC2 ofrece el mayor ahorro pero puede interrumpirse sin aviso?",
+      "options": {
+        "A": "Reserved",
+        "B": "Spot",
+        "C": "On-Demand",
+        "D": "Savings Plans"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon EC2"
+      ]
+    },
+    {
+      "id": 157,
+      "originalNumber": 13,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué opción de compra requiere compromiso de 1 a 3 años con descuento de hasta 75%?",
+      "options": {
+        "A": "Reserved Instances",
+        "B": "On-Demand",
+        "C": "Spot",
+        "D": "Savings Plans"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 158,
+      "originalNumber": 14,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio recomienda tipos de instancia EC2 basándose en métricas reales de uso?",
+      "options": {
+        "A": "CloudWatch",
+        "B": "AWS Compute Optimizer",
+        "C": "AWS Config",
+        "D": "AWS Trusted Advisor"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon CloudWatch",
+        "Amazon EC2",
+        "AWS Config",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 159,
+      "originalNumber": 15,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué opción de compra ofrece ahorro flexible comprometiendo gasto ´por ($/hora), no tipo de instancia?",
+      "options": {
+        "A": "Savings Plans",
+        "B": "Spot",
+        "C": "Reserved",
+        "D": "On-Demand"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 160,
+      "originalNumber": 16,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece almacenamiento de objetos altamente duradero y escalable?",
+      "options": {
+        "A": "Amazon EBS",
+        "B": "Amazon EFS",
+        "C": "Amazon S3",
+        "D": "AWS Backup"
+      },
+      "correctAnswer": "C",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "Amazon EBS",
+        "Amazon EFS"
+      ]
+    },
+    {
+      "id": 161,
+      "originalNumber": 17,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué clase de almacenamiento S3 se usa para archivar datos a muy largo plazo con bajo costo y recuperación lenta?",
+      "options": {
+        "A": "S3 Standard",
+        "B": "S3 Glacier Deep Archive",
+        "C": "S3 One Zone-IA",
+        "D": "S3 Intelligent-Tiering"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon S3"
+      ]
+    },
+    {
+      "id": 162,
+      "originalNumber": 18,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio permite migrar datos entre sistemas locales y AWS usando conexión de red cifrada?",
+      "options": {
+        "A": "AWS DataSync",
+        "B": "AWS Snowball",
+        "C": "AWS Storage Gateway",
+        "D": "AWS Glue"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS Storage Gateway",
+        "AWS Snowball",
+        "AWS DataSync",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 163,
+      "originalNumber": 20,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio conecta almacenamiento local con almacenamiento en la nube para un acceso híbrido?",
+      "options": {
+        "A": "AWS Backup",
+        "B": "AWS Storage Gateway",
+        "C": "AWS DataSync",
+        "D": "AWS Snowball"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS Storage Gateway",
+        "AWS Snowball",
+        "AWS DataSync"
+      ]
+    },
+    {
+      "id": 164,
+      "originalNumber": 21,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece bases de datos relacionales administradas con múltiples motores (MySQL, PostgreSQL, Oracle, SQL Server, etc.)?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon Aurora",
+        "C": "Amazon Neptune",
+        "D": "Amazon DynamoDB"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 165,
+      "originalNumber": 22,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece una base de datos relacional optimizada por AWS y compatible con MySQL y PostgreSQL?",
+      "options": {
+        "A": "Amazon Aurora",
+        "B": "Amazon RDS",
+        "C": "Amazon Neptune",
+        "D": "Amazon Redshift"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon RDS",
+        "Amazon Redshift"
+      ]
+    },
+    {
+      "id": 166,
+      "originalNumber": 23,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS usa un modelo de grafos para analizar relaciones complejas entre datos (por ejemplo, redes sociales o fraudes)?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon Aurora",
+        "C": "Amazon Neptune",
+        "D": "Amazon DynamoDB"
+      },
+      "correctAnswer": "C",
+      "explanation": "",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 167,
+      "originalNumber": 24,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio NoSQL de AWS ofrece baja latencia, escalado automático y almacenamiento gratuito de 25 GB en el Free Tier?",
+      "options": {
+        "A": "Platform",
+        "B": "Operations",
+        "C": "Business",
+        "D": "People"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 168,
+      "originalNumber": 35,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué perspectiva del CAF se enfoca en la administración, monitoreo y mejora continua después de la migración?",
+      "options": {
+        "A": "Operations",
+        "B": "Security",
+        "C": "Platform",
+        "D": "Governance"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 169,
+      "originalNumber": 36,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué plan de soporte de AWS es gratuito e incluye solo acceso a documentación y foros?",
+      "options": {
+        "A": "Developer",
+        "B": "Business",
+        "C": "Enterprise",
+        "D": "Basic"
+      },
+      "correctAnswer": "D",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 170,
+      "originalNumber": 37,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué plan de soporte está diseñado para entornos de desarrollo y pruebas, con tiempo de respuesta de menos de 12 horas?",
+      "options": {
+        "A": "Business",
+        "B": "Enterprise",
+        "C": "Developer",
+        "D": "Basic"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 171,
+      "originalNumber": 40,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio analiza tu cuenta y recomienda mejoras en seguridad, rendimiento y optimización de costos?",
+      "options": {
+        "A": "AWS Trusted Advisor",
+        "B": "AWS Config",
+        "C": "Amazon Inspector",
+        "D": "AWS CloudTrail"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Inspector",
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 172,
+      "originalNumber": 41,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS ofrece 1 millón de solicitudes gratuitas por mes sin límite de tiempo (Always Free)?",
+      "options": {
+        "A": "Amazon S3",
+        "B": "AWS Lambda",
+        "C": "Amazon EC2",
+        "D": "Amazon RDS"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "Amazon EC2",
+        "Amazon RDS",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 173,
+      "originalNumber": 42,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ofrece 5 GB de almacenamiento gratuito durante los primeros 12 meses?",
+      "options": {
+        "A": "Amazon DynamoDB",
+        "B": "Amazon S3",
+        "C": "AWS Glue",
+        "D": "Amazon EC2"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "Amazon EC2",
+        "Amazon DynamoDB",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 174,
+      "originalNumber": 43,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio NoSQL ofrece 25 GB de almacenamiento gratuito de forma permanente (Always Free)?",
+      "options": {
+        "A": "Amazon Aurora",
+        "B": "Amazon DynamoDB",
+        "C": "Amazon Neptune",
+        "D": "Amazon RDS"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon Aurora",
+        "Amazon Neptune",
+        "Amazon DynamoDB",
+        "Amazon RDS"
+      ]
+    },
+    {
+      "id": 175,
+      "originalNumber": 44,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de mensajería ofrece 1 millón de notificaciones gratuitas al mes?",
+      "options": {
+        "A": "Amazon SQS",
+        "B": "Amazon SNS",
+        "C": "AWS Lambda",
+        "D": "Amazon MQ"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 176,
+      "originalNumber": 45,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué ocurre si un usuario excede los límites del Free Tier?",
+      "options": {
+        "A": "AWS elimina la cuenta.",
+        "B": "AWS detiene el servicio automáticamente.",
+        "C": "Se aplican las tarifas normales",
+        "D": "El servicio sigue siendo gratuito."
+      },
+      "correctAnswer": "C",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 177,
+      "originalNumber": 46,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué herramienta permite monitorear métricas como CPU, memoria y actividad de red de tus recursos AWS?",
+      "options": {
+        "A": "AWS Config",
+        "B": "Amazon CloudWatch",
+        "C": "AWS CloudTrail",
+        "D": "AWS Trusted Advisor"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon CloudWatch",
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 178,
+      "originalNumber": 47,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio registra todas las llamadas a la API de tu cuenta AWS para auditorías y seguimiento?",
+      "options": {
+        "A": "AWS CloudTrail",
+        "B": "CloudWatch",
+        "C": "AWS Config",
+        "D": "Trusted Advisor"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudWatch",
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 179,
+      "originalNumber": 48,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio permite definir usuarios, grupos y roles para controlar el acceso a los recursos de AWS?",
+      "options": {
+        "A": "AWS Organizations",
+        "B": "AWS Key Management Service (KMS)",
+        "C": "AWS IAM",
+        "D": "AWS Config"
+      },
+      "correctAnswer": "C",
+      "explanation": "",
+      "services": [
+        "AWS IAM",
+        "AWS Organizations",
+        "AWS KMS",
+        "AWS Config"
+      ]
+    },
+    {
+      "id": 180,
+      "originalNumber": 49,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio de AWS evalúa tu cuenta y recomienda mejoras en costos, seguridad y rendimiento?",
+      "options": {
+        "A": "AWS Trusted Advisor",
+        "B": "AWS Config",
+        "C": "AWS CloudTrail",
+        "D": "Amazon Inspector"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Inspector",
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 181,
+      "originalNumber": 50,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio ejecuta código sin necesidad de aprovisionar ni administrar servidores?",
+      "options": {
+        "A": "AWS Batch",
+        "B": "Amazon EC2",
+        "C": "AWS Lambda",
+        "D": "Amazon ECS"
+      },
+      "correctAnswer": "C",
+      "explanation": "",
+      "services": [
+        "Amazon EC2",
+        "Amazon ECS",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 182,
+      "originalNumber": 51,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS ejecuta consultas SQL directamente sobre datos almacenados en Amazon S3, sin necesidad de moverlos?",
+      "options": {
+        "A": "Amazon Athena",
+        "B": "Amazon Redshift",
+        "C": "AWS Glue",
+        "D": "Amazon RDS"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "Amazon RDS",
+        "Amazon Redshift",
+        "Amazon Athena",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 183,
+      "originalNumber": 52,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS permite crear, entrenar y desplegar modelos de Machine Learning personalizados?",
+      "options": {
+        "A": "Amazon Rekognition",
+        "B": "Amazon SageMaker",
+        "C": "AWS Glue",
+        "D": "Amazon Comprehend"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon Rekognition",
+        "Amazon Comprehend",
+        "Amazon SageMaker",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 184,
+      "originalNumber": 53,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio permite recopilar métricas, logs y establecer alarmas automáticas para tus recursos AWS?",
+      "options": {
+        "A": "AWS CloudTrail",
+        "B": "Amazon CloudWatch",
+        "C": "AWS Config",
+        "D": "AWS Trusted Advisor"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon CloudWatch",
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 185,
+      "originalNumber": 54,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio administra nombres de dominio (DNS) y realiza balanceo de tráfico entre recursos de AWS y externos?",
+      "options": {
+        "A": "AWS Global Accelerator",
+        "B": "Amazon Route 53",
+        "C": "Amazon CloudFront",
+        "D": "Elastic Load Balancing"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon CloudFront",
+        "Elastic Load Balancing",
+        "Amazon Route 53"
+      ]
+    },
+    {
+      "id": 186,
+      "originalNumber": 55,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio permite automatizar tareas de respaldo y restauración de datos en la nube?",
+      "options": {
+        "A": "AWS Backup",
+        "B": "AWS DataSync",
+        "C": "Amazon S3",
+        "D": "AWS Storage Gateway"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "AWS Storage Gateway",
+        "AWS DataSync"
+      ]
+    },
+    {
+      "id": 187,
+      "originalNumber": 56,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio se utiliza para analizar grandes volúmenes de datos estructurados mediante un clúster de almacenamiento y cómputo?",
+      "options": {
+        "A": "Amazon Athena",
+        "B": "Amazon Redshift",
+        "C": "AWS Glue",
+        "D": "Amazon QuickSight"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon QuickSight",
+        "Amazon Redshift",
+        "Amazon Athena",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 188,
+      "originalNumber": 57,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS permite crear paneles y visualizaciones interactivas de datos sin necesidad de código?",
+      "options": {
+        "A": "Amazon Redshift",
+        "B": "Amazon QuickSight",
+        "C": "AWS Glue",
+        "D": "Amazon Athena"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon QuickSight",
+        "Amazon Redshift",
+        "Amazon Athena",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 189,
+      "originalNumber": 58,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio administra certificados SSL/TLS para sitios web y balanceadores de carga en AWS?",
+      "options": {
+        "A": "AWS Key Management Service (KMS)",
+        "B": "AWS Certificate Manager (ACM)",
+        "C": "AWS Secrets Manager",
+        "D": "AWS IAM"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS IAM",
+        "AWS Secrets Manager",
+        "AWS KMS",
+        "AWS Certificate Manager"
+      ]
+    },
+    {
+      "id": 190,
+      "originalNumber": 59,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de red conecta de forma privada diferentes VPC dentro de AWS, incluso entre regiones?",
+      "options": {
+        "A": "VPC Peering",
+        "B": "AWS Direct Connect",
+        "C": "AWS CloudFront",
+        "D": "Route 53"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudFront",
+        "Amazon Route 53",
+        "AWS Direct Connect",
+        "Amazon VPC"
+      ]
+    },
+    {
+      "id": 191,
+      "originalNumber": 60,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio proporciona una conexión de red física y dedicada entre AWS y tu infraestructura local?",
+      "options": {
+        "A": "AWS VPN",
+        "B": "AWS Direct Connect",
+        "C": "AWS Global Accelerator",
+        "D": "AWS Transit Gateway"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS VPN",
+        "AWS Direct Connect"
+      ]
+    },
+    {
+      "id": 192,
+      "originalNumber": 61,
+      "domain": "Domain 2: Security and Compliance",
+      "question": "¿Qué servicio centraliza la administración de múltiples cuentas AWS y permite aplicar políticas de seguridad y presupuesto a nivel organizacional?",
+      "options": {
+        "A": "AWS Control Tower",
+        "B": "AWS Organizations",
+        "C": "AWS IAM",
+        "D": "AWS Config"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS IAM",
+        "AWS Organizations",
+        "AWS Config"
+      ]
+    },
+    {
+      "id": 193,
+      "originalNumber": 62,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué servicio automatiza la creación y administración de una estructura segura de cuentas múltiples (landing zone) en AWS Organizations?",
+      "options": {
+        "A": "AWS Control Tower",
+        "B": "AWS Organizations",
+        "C": "AWS Config",
+        "D": "AWS Trusted Advisor"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "AWS Organizations",
+        "AWS Config",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 194,
+      "originalNumber": 63,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio de AWS permite crear y administrar APIs REST, HTTP o WebSocket de forma segura y escalable?",
+      "options": {
+        "A": "AWS Lambda",
+        "B": "Amazon API Gateway",
+        "C": "AWS AppSync",
+        "D": "AWS Elastic Beanstalk"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS Elastic Beanstalk",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "id": 195,
+      "originalNumber": 64,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio permite desplegar aplicaciones web o backend sin necesidad de administrar la infraestructura subyacente (EC2, load balancers, autoscaling)?",
+      "options": {
+        "A": "AWS Organizations + AWS Control Tower + Amazon API Gateway",
+        "B": "AWS Lambda + S3 + CloudFront",
+        "C": "AWS IAM + CloudWatch + EC2",
+        "D": "AWS Config + Trusted Advisor + Route 53"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon CloudFront",
+        "Amazon S3",
+        "Amazon CloudWatch",
+        "Amazon EC2",
+        "AWS IAM",
+        "Amazon Route 53",
+        "AWS Organizations",
+        "AWS Lambda",
+        "AWS Config",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 196,
+      "originalNumber": 1,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio recomienda tipos de instancia EC2 basados en datos de rendimiento real?",
+      "options": {
+        "A": "AWS Config",
+        "B": "Amazon CloudWatch",
+        "C": "Trusted Advisor",
+        "D": "AWS Inspector"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon CloudWatch",
+        "Amazon EC2",
+        "Amazon Inspector",
+        "AWS Config",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 197,
+      "originalNumber": 3,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué característica permite mover automáticamente objetos de S3 Standard a Glacier según su antigüedad?",
+      "options": {
+        "A": "S3 Versioning",
+        "B": "AWS Backup Vault Lock",
+        "C": "S3 Lifecycle",
+        "D": "AWS DataSync"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "AWS DataSync"
+      ]
+    },
+    {
+      "id": 198,
+      "originalNumber": 5,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio permite restaurar una base de datos al estado que tenía hace exactamente 4 horas y 15 minutos?",
+      "options": {
+        "A": "Amazon S3",
+        "B": "Amazon RDS",
+        "C": "Amazon DynamoDB",
+        "D": "AWS Glue"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "Amazon DynamoDB",
+        "Amazon RDS",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 199,
+      "originalNumber": 6,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuál es la función del “point-in-time recovery” en DynamoDB?",
+      "options": {
+        "A": "Restaurar archivos S3",
+        "B": "Recuperar la tabla a un momento específico en los últimos 35 días",
+        "C": "Replicar tablas en otra región",
+        "D": "Crear copias en Glacier"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "Amazon DynamoDB"
+      ]
+    },
+    {
+      "id": 200,
+      "originalNumber": 7,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio puede leer formularios escaneados y extraer campos estructurados?",
+      "options": {
+        "A": "Amazon Rekognition",
+        "B": "Amazon Textract",
+        "C": "Amazon Comprehend",
+        "D": "Amazon Polly"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon Textract",
+        "Amazon Polly",
+        "Amazon Rekognition",
+        "Amazon Comprehend"
+      ]
+    },
+    {
+      "id": 201,
+      "originalNumber": 9,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio detecta si una opinión de cliente tiene sentimiento positivo o negativo?",
+      "options": {
+        "A": "Amazon Translate",
+        "B": "Amazon Comprehend",
+        "C": "Amazon Textract",
+        "D": "Amazon Transcribe"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "Amazon Textract",
+        "Amazon Translate",
+        "Amazon Comprehend",
+        "Amazon Transcribe"
+      ]
+    },
+    {
+      "id": 202,
+      "originalNumber": 10,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuál de los siguientes servicios analiza el idioma y el contexto de grandes volúmenes de texto?",
+      "options": {
+        "A": "Amazon Comprehend",
+        "B": "Amazon SageMaker",
+        "C": "AWS Glue",
+        "D": "AWS Lambda"
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon Comprehend",
+        "Amazon SageMaker",
+        "AWS Lambda",
+        "AWS Glue"
+      ]
+    },
+    {
+      "id": 203,
+      "originalNumber": 11,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Dónde puedes encontrar artículos técnicos oficiales sobre cómo resolver errores en servicios AWS?",
+      "options": {
+        "A": "AWS Documentation",
+        "B": "AWS Knowledge Base",
+        "C": "AWS Trusted Advisor",
+        "D": "AWS CloudTrail"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS CloudTrail",
+        "AWS Trusted Advisor"
+      ]
+    },
+    {
+      "id": 204,
+      "originalNumber": 12,
+      "domain": "Domain 4: Billing, Pricing, and Support",
+      "question": "¿Qué plan de soporte permite crear solicitudes técnicas (casos) mediante API?",
+      "options": {
+        "A": "Basic",
+        "B": "Developer",
+        "C": "Business",
+        "D": "Enterprise"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 205,
+      "originalNumber": 13,
+      "domain": "Domain 1: Cloud Concepts",
+      "question": "¿Qué servicio envía notificaciones a varios suscriptores (por ejemplo, correos, SMS o Lambda)?",
+      "options": {
+        "A": "Amazon SQS",
+        "B": "Amazon SNS",
+        "C": "AWS CloudTrail",
+        "D": "Amazon MQ"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": [
+        "AWS Lambda",
+        "AWS CloudTrail"
+      ]
+    },
+    {
+      "id": 206,
+      "originalNumber": 14,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Qué servicio se usa para comunicar componentes de una aplicación de manera asíncrona y desacoplada?",
+      "options": {
+        "A": "Amazon SNS",
+        "B": "Amazon SQS",
+        "C": "AWS Step Functions",
+        "D": "AWS Batch"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 207,
+      "originalNumber": 15,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuántas solicitudes gratuitas ofrece el Free Tier para SNS y SQS?",
+      "options": {
+        "A": "100.000",
+        "B": "1 millón",
+        "C": "10 millones",
+        "D": "5 millones"
+      },
+      "correctAnswer": "B",
+      "explanation": "",
+      "services": []
+    },
+    {
+      "id": 208,
+      "originalNumber": 15,
+      "domain": "Domain 3: Cloud Technology and Services",
+      "question": "¿Cuántas solicitudes gratuitas ofrecen SNS y SQS al mes? → Respuesta: 1 millón. RESUMEN GENERAL DE REPASO -   Compute Optimizer → recomienda instancias EC2 según uso. -   S3 Lifecycle → mueve objetos automáticamente según antigüedad. -   Vault Lock → protege respaldos de eliminación (WORM). -   RDS y DynamoDB → restauración punto en el tiempo y respaldos automáticos. -   Textract → extrae texto y tablas de documentos escaneados. -   Comprehend → analiza sentimientos e idioma en texto. -   Knowledge Base → artículos técnicos del soporte AWS. -   Acceso por API → desde plan Developer. -   SNS/SQS → mensajería gratuita (1 millón/mes). 🧠 SIMULADOR DETALLADO – TEMAS ESPECÍFICOS AWS re/Start 1. Un administrador quiere reducir costos de EC2 sin afectar el rendimiento. ¿Qué servicio debe usar?",
+      "options": {
+        "A": "Definir qué seguridad maneja AWS y cuál el cliente.",
+        "B": "Monitorear costos.",
+        "C": "Cifrar bases de datos.",
+        "D": "Configurar IAM."
+      },
+      "correctAnswer": "A",
+      "explanation": "",
+      "services": [
+        "Amazon S3",
+        "Amazon Textract",
+        "Amazon EC2",
+        "AWS IAM",
+        "Amazon Comprehend",
+        "Amazon DynamoDB",
+        "Amazon RDS",
+        "AWS Config"
+      ]
+    }
+  ]
+}

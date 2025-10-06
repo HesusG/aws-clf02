@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador AWS CLF-C02 | Cloud Practitioner</title>
+    <meta name="description" content="Simulador de examen AWS Certified Cloud Practitioner CLF-C02 en español. Practica con preguntas reales organizadas según dominios oficiales.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="aws-badge">AWS</span>
+                    Simulador CLF-C02
+                </h1>
+                <p class="subtitle">AWS Certified Cloud Practitioner</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- About Section -->
+            <section class="about-section">
+                <h2>Acerca del Examen CLF-C02</h2>
+                <div class="exam-info-grid">
+                    <div class="info-card">
+                        <div class="info-number">65</div>
+                        <div class="info-label">Preguntas</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-number">90</div>
+                        <div class="info-label">Minutos</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-number">700</div>
+                        <div class="info-label">Puntaje Mínimo</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-number">208</div>
+                        <div class="info-label">Preguntas Disponibles</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exam Configuration -->
+            <section class="config-section">
+                <h2>Configurar Examen</h2>
+
+                <form id="examConfigForm" class="config-form">
+                    <!-- Dominios AWS Oficiales -->
+                    <div class="form-group">
+                        <label class="form-label">Dominios AWS CLF-C02</label>
+                        <p class="form-hint">Selecciona los dominios que deseas practicar</p>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="domain" value="Domain 1: Cloud Concepts" checked>
+                                <span class="checkbox-text">
+                                    <strong>Domain 1: Cloud Concepts</strong>
+                                    <span class="domain-weight">(24% del examen)</span>
+                                </span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="domain" value="Domain 2: Security and Compliance" checked>
+                                <span class="checkbox-text">
+                                    <strong>Domain 2: Security and Compliance</strong>
+                                    <span class="domain-weight">(30% del examen)</span>
+                                </span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="domain" value="Domain 3: Cloud Technology and Services" checked>
+                                <span class="checkbox-text">
+                                    <strong>Domain 3: Cloud Technology and Services</strong>
+                                    <span class="domain-weight">(34% del examen)</span>
+                                </span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="domain" value="Domain 4: Billing, Pricing, and Support" checked>
+                                <span class="checkbox-text">
+                                    <strong>Domain 4: Billing, Pricing, and Support</strong>
+                                    <span class="domain-weight">(12% del examen)</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Número de Preguntas -->
+                    <div class="form-group">
+                        <label class="form-label" for="questionCount">Número de Preguntas</label>
+                        <select id="questionCount" name="questionCount" class="form-select">
+                            <option value="10">10 preguntas (Práctica rápida)</option>
+                            <option value="30">30 preguntas (Práctica media)</option>
+                            <option value="50">50 preguntas (Práctica extendida)</option>
+                            <option value="65" selected>65 preguntas (Simulación real)</option>
+                            <option value="all">Todas las preguntas disponibles</option>
+                        </select>
+                    </div>
+
+                    <!-- Tiempo Límite -->
+                    <div class="form-group">
+                        <label class="form-label" for="timeLimit">Tiempo Límite</label>
+                        <select id="timeLimit" name="timeLimit" class="form-select">
+                            <option value="30">30 minutos</option>
+                            <option value="60">60 minutos</option>
+                            <option value="90" selected>90 minutos (Tiempo oficial)</option>
+                            <option value="0">Sin límite de tiempo</option>
+                        </select>
+                    </div>
+
+                    <!-- Modo de Examen -->
+                    <div class="form-group">
+                        <label class="form-label" for="examMode">Modo de Examen</label>
+                        <select id="examMode" name="examMode" class="form-select">
+                            <option value="study">Modo Estudio (ver respuesta inmediata)</option>
+                            <option value="simulation" selected>Modo Simulación (revisar al final)</option>
+                        </select>
+                    </div>
+
+                    <!-- Orden de Preguntas -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <input type="checkbox" id="shuffleQuestions" name="shuffleQuestions" checked>
+                            Aleatorizar orden de preguntas
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-primary">
+                        Comenzar Examen
+                    </button>
+                </form>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="stats-section">
+                <h3>Distribución de Preguntas por Dominio</h3>
+                <div class="stats-grid" id="statsGrid">
+                    <!-- Se llenará dinámicamente con JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                Este simulador está basado en los dominios oficiales del examen
+                <strong>AWS Certified Cloud Practitioner (CLF-C02)</strong>.
+                No está afiliado con Amazon Web Services.
+            </p>
+            <p class="footer-links">
+                <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank" rel="noopener">
+                    Información Oficial del Examen
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="js/config.js"></script>
+</body>
+</html>

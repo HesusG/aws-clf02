@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen en Progreso | AWS CLF-C02</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="exam-container">
+        <!-- Exam Header with Timer and Progress -->
+        <div class="exam-header">
+            <div class="exam-progress">
+                <span class="progress-text">Pregunta <span id="currentQuestion">1</span> de <span id="totalQuestions">65</span></span>
+            </div>
+            <div class="timer-container">
+                <div id="timer" class="timer">90:00</div>
+            </div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="question-card" id="questionCard">
+            <span class="question-domain" id="questionDomain">Domain 1: Cloud Concepts</span>
+            <h2 class="question-text" id="questionText">Cargando pregunta...</h2>
+
+            <ul class="options-list" id="optionsList">
+                <!-- Opciones se generarán dinámicamente -->
+            </ul>
+
+            <!-- Explicación (solo visible en modo estudio) -->
+            <div id="explanationBox" class="explanation-box" style="display: none;">
+                <div class="explanation-title">✓ Explicación</div>
+                <div class="explanation-text" id="explanationText"></div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="exam-navigation">
+            <button id="btnPrevious" class="btn-secondary" onclick="previousQuestion()">
+                ← Anterior
+            </button>
+
+            <button id="btnMark" class="btn-mark" onclick="toggleMark()">
+                🔖 Marcar para Revisión
+            </button>
+
+            <button id="btnNext" class="btn-primary" onclick="nextQuestion()">
+                Siguiente →
+            </button>
+        </div>
+
+        <!-- Progress Overview (fixed at bottom) -->
+        <div class="progress-overview" id="progressOverview">
+            <!-- Se generará dinámicamente -->
+        </div>
+    </div>
+
+    <script src="js/simulator.js"></script>
+</body>
+</html>

@@ -1,0 +1,596 @@
+/**
+ * Estilos del Simulador AWS CLF-C02
+ * Colores oficiales AWS: #FF9900 (naranja), #232F3E (gris oscuro)
+ */
+
+/* Reset y variables */
+:root {
+    --aws-orange: #FF9900;
+    --aws-dark: #232F3E;
+    --aws-light: #FFFFFF;
+    --aws-gray: #545B64;
+    --aws-light-gray: #EAEDED;
+    --aws-border: #D5DBDB;
+    --success: #1D8102;
+    --error: #D13212;
+    --warning: #FF9900;
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: #F2F3F3;
+    color: var(--aws-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--aws-dark) 0%, #16202E 100%);
+    color: var(--aws-light);
+    padding: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.aws-badge {
+    background-color: var(--aws-orange);
+    color: var(--aws-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--aws-light-gray);
+    font-weight: 300;
+}
+
+/* Main Content */
+.main-content {
+    padding: 2rem 0;
+}
+
+/* About Section */
+.about-section {
+    background: var(--aws-light);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    color: var(--aws-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.exam-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.info-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--aws-orange) 0%, #FF8C00 100%);
+    color: var(--aws-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 153, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+}
+
+.info-number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.info-label {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    opacity: 0.95;
+}
+
+/* Config Section */
+.config-section {
+    background: var(--aws-light);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.config-section h2 {
+    color: var(--aws-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Form Elements */
+.config-form {
+    max-width: 800px;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--aws-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.form-hint {
+    color: var(--aws-gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--aws-light-gray);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.checkbox-label:hover {
+    background: #DFE3E4;
+    border-color: var(--aws-orange);
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 0.25rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--aws-orange);
+}
+
+.checkbox-text {
+    flex: 1;
+}
+
+.checkbox-text strong {
+    display: block;
+    color: var(--aws-dark);
+    margin-bottom: 0.25rem;
+}
+
+.domain-weight {
+    color: var(--aws-gray);
+    font-size: 0.9rem;
+}
+
+.form-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--aws-border);
+    border-radius: 6px;
+    background-color: var(--aws-light);
+    color: var(--aws-dark);
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--aws-orange);
+}
+
+.form-select:hover {
+    border-color: var(--aws-gray);
+}
+
+/* Buttons */
+.btn-primary {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--aws-light);
+    background: linear-gradient(135deg, var(--aws-orange) 0%, #FF8C00 100%);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(255, 153, 0, 0.3);
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #FF8C00 0%, #FF7700 100%);
+    box-shadow: 0 6px 12px rgba(255, 153, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Stats Section */
+.stats-section {
+    background: var(--aws-light);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stats-section h3 {
+    color: var(--aws-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    padding: 1.5rem;
+    background: var(--aws-light-gray);
+    border-radius: 6px;
+    border-left: 4px solid var(--aws-orange);
+}
+
+.stat-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.stat-badge {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.stat-name {
+    font-weight: 600;
+    color: var(--aws-dark);
+    font-size: 0.95rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--aws-orange);
+    line-height: 1;
+}
+
+.stat-percentage {
+    color: var(--aws-gray);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--aws-gray);
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--aws-orange);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .aws-badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .exam-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-number {
+        font-size: 2.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section,
+    .config-section,
+    .stats-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .exam-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-number {
+        font-size: 2rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+}
+
+/* Exam Simulator Styles */
+.exam-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.exam-header {
+    background: var(--aws-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.exam-progress {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-text {
+    font-weight: 600;
+    color: var(--aws-dark);
+}
+
+.timer {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--aws-orange);
+    font-variant-numeric: tabular-nums;
+}
+
+.timer.warning {
+    color: var(--error);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.question-card {
+    background: var(--aws-light);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question-domain {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--aws-light-gray);
+    color: var(--aws-gray);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.question-text {
+    font-size: 1.2rem;
+    color: var(--aws-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.options-list {
+    list-style: none;
+}
+
+.option-item {
+    margin-bottom: 1rem;
+}
+
+.option-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--aws-light-gray);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.option-label:hover {
+    background: #DFE3E4;
+    border-color: var(--aws-orange);
+}
+
+.option-label input[type="radio"] {
+    margin-top: 0.25rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--aws-orange);
+}
+
+.option-letter {
+    font-weight: 700;
+    color: var(--aws-orange);
+    min-width: 30px;
+}
+
+.option-text {
+    flex: 1;
+    color: var(--aws-dark);
+}
+
+.option-label.correct {
+    background: #D5F4E6;
+    border-color: var(--success);
+}
+
+.option-label.incorrect {
+    background: #FCDFE4;
+    border-color: var(--error);
+}
+
+.explanation-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #F0F8FF;
+    border-left: 4px solid #0073BB;
+    border-radius: 4px;
+}
+
+.explanation-title {
+    font-weight: 700;
+    color: #0073BB;
+    margin-bottom: 0.5rem;
+}
+
+.explanation-text {
+    color: var(--aws-dark);
+    line-height: 1.6;
+}
+
+.exam-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--aws-dark);
+    background: var(--aws-light-gray);
+    border: 2px solid var(--aws-border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #DFE3E4;
+    border-color: var(--aws-gray);
+}
+
+.btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-mark {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--aws-orange);
+    background: var(--aws-light);
+    border: 2px solid var(--aws-orange);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-mark:hover {
+    background: var(--aws-orange);
+    color: var(--aws-light);
+}
+
+.btn-mark.marked {
+    background: var(--aws-orange);
+    color: var(--aws-light);
+}

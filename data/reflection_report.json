@@ -1,0 +1,91 @@
+{
+  "total_questions": 208,
+  "valid_questions": 208,
+  "validation_errors": 5,
+  "domain_distribution": {
+    "Domain 1: Cloud Concepts": {
+      "actual": 11.5,
+      "expected": 24,
+      "difference": -12.5
+    },
+    "Domain 2: Security and Compliance": {
+      "actual": 14.4,
+      "expected": 30,
+      "difference": -15.6
+    },
+    "Domain 3: Cloud Technology and Services": {
+      "actual": 64.9,
+      "expected": 34,
+      "difference": 30.9
+    },
+    "Domain 4: Billing, Pricing, and Support": {
+      "actual": 9.1,
+      "expected": 12,
+      "difference": -2.9
+    }
+  },
+  "top_services": [
+    [
+      "AWS Config",
+      34
+    ],
+    [
+      "Amazon S3",
+      31
+    ],
+    [
+      "Amazon EC2",
+      30
+    ],
+    [
+      "AWS Trusted Advisor",
+      28
+    ],
+    [
+      "Amazon RDS",
+      27
+    ],
+    [
+      "AWS CloudTrail",
+      25
+    ],
+    [
+      "AWS Lambda",
+      25
+    ],
+    [
+      "AWS Glue",
+      25
+    ],
+    [
+      "Amazon DynamoDB",
+      20
+    ],
+    [
+      "Amazon CloudWatch",
+      19
+    ]
+  ],
+  "reflection_notes": [
+    "Q1: No menciona servicios AWS específicos",
+    "Q2: No menciona servicios AWS específicos",
+    "Q1: No menciona servicios AWS específicos",
+    "Q3: No menciona servicios AWS específicos",
+    "Q4: No menciona servicios AWS específicos",
+    "Q1: No menciona servicios AWS específicos",
+    "Q5: No menciona servicios AWS específicos",
+    "Q11: No menciona servicios AWS específicos",
+    "Q13: No menciona servicios AWS específicos",
+    "Q14: No menciona servicios AWS específicos",
+    "Q30: No menciona servicios AWS específicos",
+    "Q31: No menciona servicios AWS específicos",
+    "Q32: No menciona servicios AWS específicos",
+    "Q33: No menciona servicios AWS específicos",
+    "Q34: No menciona servicios AWS específicos",
+    "Q35: No menciona servicios AWS específicos",
+    "Q38: No menciona servicios AWS específicos",
+    "Q39: No menciona servicios AWS específicos",
+    "Q44: No menciona servicios AWS específicos",
+    "Q13: No menciona servicios AWS específicos"
+  ]
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Examen | AWS CLF-C02</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .results-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .results-header {
+            background: linear-gradient(135deg, var(--aws-dark) 0%, #16202E 100%);
+            color: var(--aws-light);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .results-header.passed {
+            background: linear-gradient(135deg, var(--success) 0%, #1D8102 100%);
+        }
+
+        .results-header.failed {
+            background: linear-gradient(135deg, var(--error) 0%, #D13212 100%);
+        }
+
+        .score-display {
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .pass-status {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .summary-card {
+            background: var(--aws-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-number.correct {
+            color: var(--success);
+        }
+
+        .summary-number.incorrect {
+            color: var(--error);
+        }
+
+        .summary-number.unanswered {
+            color: var(--aws-gray);
+        }
+
+        .domain-breakdown {
+            background: var(--aws-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .domain-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .domain-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .domain-bar {
+            height: 30px;
+            background: var(--aws-light-gray);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .domain-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--aws-orange) 0%, #FF8C00 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--aws-light);
+            font-weight: 600;
+            transition: width 1s ease;
+        }
+
+        .detailed-review {
+            background: var(--aws-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-question {
+            border-bottom: 1px solid var(--aws-border);
+            padding: 1.5rem 0;
+        }
+
+        .review-question:last-child {
+            border-bottom: none;
+        }
+
+        .review-question-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-status {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .review-status.correct {
+            background: #D5F4E6;
+            color: var(--success);
+        }
+
+        .review-status.incorrect {
+            background: #FCDFE4;
+            color: var(--error);
+        }
+
+        .review-status.unanswered {
+            background: var(--aws-light-gray);
+            color: var(--aws-gray);
+        }
+
+        .review-question-text {
+            font-size: 1.1rem;
+            color: var(--aws-dark);
+            margin-bottom: 1rem;
+        }
+
+        .review-answer {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .review-answer.user {
+            background: #F0F8FF;
+        }
+
+        .review-answer.correct-answer {
+            background: #D5F4E6;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-large {
+            flex: 1;
+            min-width: 200px;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="results-container">
+        <!-- Results Header -->
+        <div id="resultsHeader" class="results-header">
+            <div class="pass-status" id="passStatus">Cargando resultados...</div>
+            <div class="score-display" id="scoreDisplay">---</div>
+            <div>de 1000 puntos</div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-grid" id="summaryGrid">
+            <!-- Se generará dinámicamente -->
+        </div>
+
+        <!-- Domain Breakdown -->
+        <div class="domain-breakdown">
+            <h2>Rendimiento por Dominio</h2>
+            <div id="domainBreakdown">
+                <!-- Se generará dinámicamente -->
+            </div>
+        </div>
+
+        <!-- Detailed Review -->
+        <div class="detailed-review">
+            <h2>Revisión Detallada de Respuestas</h2>
+            <div id="detailedReview">
+                <!-- Se generará dinámicamente -->
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <a href="index.html" class="btn-large btn-primary">
+                Nuevo Examen
+            </a>
+            <button onclick="exportResults()" class="btn-large btn-secondary">
+                Exportar Resultados (JSON)
+            </button>
+        </div>
+    </div>
+
+    <script src="js/results.js"></script>
+</body>
+</html>
